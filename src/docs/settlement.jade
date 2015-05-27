@@ -21,10 +21,10 @@ block information
   
   .row
     .column
-      .margin-bottom.padding-horizontal.padding-vertical-less.radius.border-gray
+      .margin-bottom.padding-horizontal.padding-vertical-less.radius.border-gray        
         .row
-          .column.xlarge-6.xlarge-push-6
-            select
+          .column.xlarge-4
+            select.margin-top-less
               option United States
               option Canada
               option Great Britain
@@ -64,20 +64,25 @@ block information
               option Spain
               option Sweden
               option Switzerland
-          .column.xlarge-6.xlarge-pull-6
-            .h3(style="line-height: 1.15;") United States Dollars        
-              span.small-icon.background-contain.h5(style="background-image: url('/images/flags/usd.png'); vertical-align: middle; position: relative; margin-left: 0.5rem; top: 0px;")
-        hr.margin-bottom.margin-top-less.xlarge-margin-top-none(style="margin-left: -2rem; margin-right: -2rem;")
-        .row
-          .column.xlarge-4
-            h5(style="line-height:1;") Settlement Timing
-          .column.xlarge-8
-            p Settlement in USD is available via ACH to banks in the USA, and will appear in your bank account after #[strong 2 business days].
-        .row
-          .column.xlarge-4
-            h5(style="line-height:1;") Minimum Settlement
-          .column.xlarge-8
-            p The minimum settlement is #[strong 20 USD].
+        mixin currency-detail(name, flag, timing, minimum)
+          .row
+            .column
+              .h3(style="line-height: 1.15;") #{name}        
+                span.small-icon.background-contain.h5(style="background-image: url('/images/flags/#{flag}.png'); vertical-align: middle; position: relative; margin-left: 0.5rem; top: 0px;")
+          hr.margin-bottom.margin-top-less.xlarge-margin-top-none(style="margin-left: -2rem; margin-right: -2rem;")
+          .row
+            .column.large-5.xlarge-4
+              h5(style="line-height:1;") Settlement Timing
+            .column.large-7.xlarge-8
+              p #{timing}
+          .row
+            .column.large-5.xlarge-4
+              h5(style="line-height:1;") Minimum Settlement
+            .column.large-7.xlarge-8
+              p #{minimum}
+        +currency-detail("United States Dollars","usd","Settlement in USD is available via ACH to banks in the USA, and will appear in your bank account after 2 business days", "The minimum settlement is 20 USD.")
+        // +currency-detail("Canadian Dollars","cad","Settlement will appear in your bank account after two business days.", "The minimum settlement is 100 CAD.")
+        // +currency-detail("Pound Sterling","gbp","Settlement will appear in your bank account after two business days.", "The minimum settlement is 100 GBP.")
   
   ul.no-bullet.accordion(data-accordion="settlement")
     li.accordion-navigation
