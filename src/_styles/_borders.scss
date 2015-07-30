@@ -36,7 +36,9 @@
     }
   }
 }
-
+.border-left{
+  border-left:1px solid $gray-light;
+}
 .header__bottom-border:after {
   left: calc(50% - 2rem);
 }
