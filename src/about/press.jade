@@ -67,21 +67,17 @@ block content
         
       .column.large-6
         h3.header__bottom-border-left Capitalization
-        .row
-          .column.medium-4
-            p.uppercase.bold Correct
-          .column.medium-8
-            p.checkmark BitPay
-        .row
-          .column.medium-4
-            p.uppercase.bold Incorrect
-          .column.medium-8
-            .row
-              .column.xlarge-6
+        .table.large-12.radius.capitalization
+          .row
+            .column.large-4.medium-12
+              p.uppercase.bold Correct
+            
+              p.checkmark(style="width:100%;") BitPay
+            .column.large-8.medium-12.border-left
+              p.uppercase.bold Incorrect
+              .small-12
                 p.incorrect.margin-bottom-less Bitpay
                 p.incorrect.margin-bottom-less bitPay
-                
-              .column.xlarge-6
                 p.incorrect.margin-bottom-less bit-pay
                 p.incorrect.margin-bottom-less bit pay
     
