@@ -31,7 +31,7 @@ block information
   
   mixin wallet(name, url)
     tr.text-center
-      td.padding-top-less.text-left
+      td.text-left(style="height: 3em;")
         a(href="#{url}") #{name}
       block
   
@@ -128,7 +128,7 @@ block information
         +ios()
         +android()
       td.checkmark
-      td
+      td.checkmark
     
     +wallet("Armory", "https://bitcoinarmory.com/")
       td.text-left
