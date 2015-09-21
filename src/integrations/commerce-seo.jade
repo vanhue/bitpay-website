@@ -1,0 +1,116 @@
+extends ../_layouts/primary
+
+block title
+  title Commerce:SEO | BitPay
+  
+append vars
+  -var pageSelected = 'Integrations'
+
+block content
+  // set background-color to one that matches the brand
+  .section(style="background-color: #1196BA;") 
+    .row.white
+      .column.large-8
+        h2.header__bottom-border-left Commerce:SEO Plugin
+        p.lead Accept bitcoin on your commerce:SEO site with a BitPay's open source plugin. 
+      .column.large-4
+        .h2.background-contain(style="background-image: url('/images/integrations/commerceseo.png'); width: 6em; height: 2.5em;")
+        h5.bold.uppercase.margin-top-less.margin-bottom-none Category
+        p.margin-bottom E-Commerce Plugin 
+        a(href="https://github.com/bitpay/commerce-seo-plugin").arrow.white.btn.btn-white-border.uppercase.bold Get the Plugin
+        
+  .section.border-bottom-gray
+    .row            
+      .column
+        h3.header__bottom-border-left#bitpay-and-xero BitPay and Commerce:SEO
+    .row
+      .column.large-4
+        h5 Start selling everywhere.
+        br
+        p If you can ship it there, you can sell it there. Bitcoin can be sent and received anywhere in the world by anyone with an internet connection. 
+      .column.large-4
+        h5 Eliminate fraud and chargebacks.  
+        br
+        p Bitcoin transactions don't contain any sensitive financial or personal information. No chargebacks for your business, no risk of data theft for your customers – everybody wins.
+      .column.large-4
+        h5 Get to checkout in no time flat. 
+        br
+        p BitPay's scan-to-pay bitcoin invoices give your customers a faster, simpler way to pay from any device in seconds – no data entry required. 
+              
+  .section
+    .row
+      .column.large-3.hide-for-small.hide-for-medium(style="position: relative; z-index: 0")
+        ul.side-nav(role="navigation" data-magellan-expedition="fixed" data-options="destination_threshold: -80; toffset_by_height: false;")
+          h4 Guide Contents
+          li
+            a(href="#requirements" data-magellan-arrival="requirements") Requirements
+          li
+            a(href="#configuration" data-magellan-arrival="configuration") Configuration    
+          li 
+            a(href="#usage" data-magellan-arrival="usage") Usage
+          
+      .column.large-9
+        .row
+          .column
+            h3.header__bottom-border-left Integration Requirements
+            p.lead Get started by #[a.arrow-blue(href="/dashboard/signup") signing up for a BitPay merchant account].
+            p You must also have a #[a(href="https://www.commerce-seo.de/") commerce:SEO store] to use this plugin.
+                        
+        .row
+          .column 
+            .section.border-bottom-gray
+              h3.header__bottom-border-left#configuration(data-magellan-destination="configuration") Connecting BitPay and Commerce:SEO
+
+              ol(type="1")
+                li
+                  p #[a(href="https://github.com/bitpay/commerce-seo-plugin") Visit the GitHub page for this plugin] and copy the #[strong "Callback," "Includes,"] and #[strong "Lang"] folders into your commerce:SEO site drectory
+                  .note 
+                    p This action should merge the BitPay plugin folders into your existing commerce:SEO folders.
+                li
+                  p #[a(href="/dashboard/merchant/api-tokens") Create an API Key] in your BitPay merchant dashboard and copy it to your clipboard.
+                li
+                  p Go to your commerce:SEO admin panel and navigate to #[strong "Modules" &gt; "Payment"]. Install the module #[strong "Bitcoin via BitPay"].
+                li
+                  p Verify that the module is enabled. Then paste the API Key generated in your BitPay dashboard into the #[strong "API Key"] field.
+                  .note
+                    p Pairing codes are only valid for a short period of time. If a code expires before you get to use it, you can always create a new one and pair with it. You will only need to pair once.
+                li 
+                  p Select a transaction speed.
+                  .note 
+                    p This setting only affects the time after which BitPay considers the payment fully confirmed and irrevocable on the Bitcoin network. You and your customer will be immediately notified when a payment is sent, and a typical transaction only takes a few seconds to complete.
+                  ul
+                    li 
+                      p #[strong "High"]: A payment confirmation will be sent as soon as a  transaction is received in the Bitcoin network (usually a few seconds). This speed should be used for digital or low-risk items. 
+                    li
+                      p #[strong "Medium"] speed confirmations typically take 10 minutes and should be used for fulfillment processes with medium risk or items with median value.
+                    li 
+                      p #[strong "Low"] speed confirmations take about 1 hour and should be used for high-value items.
+                      .note
+                        p #[a(href="https://en.bitcoin.it/wiki/Double-spending") Double-spending] on the Bitcoin network is extremely difficult, but selecting slower transaction speeds will provide the greatest protection against them. 
+                li 
+                  p Choose a status for unpaid and paid orders (or leave the default values as defined).
+                li 
+                  p Select currency pricing that matches the currency used in your commerce:SEO store. Before using currencies other than defaults, verify that these #[a(href="/bitcoin-exchange-rates") pricing options] are supported by BitPay. 
+                li 
+                  p Choose a sort order for displaying this payment option to visitors. Lowest is displayed first.
+                li
+                  p Line 108 in #[strong bitpay.php] sets #[strong "fullNotifications"] to #[strong "true"]. Set this to #[strong "false"] if you want fewer status update emails.
+
+              p.lead Nice work! Your customers will now be able to check out with bitcoin on your commerce:SEO site.
+        
+          .row
+            .column 
+              .section.border-bottom-gray
+                h3.header__bottom-border-left#configuration(data-magellan-destination="usage") Using BitPay with Commerce:SEO 
+                ol(type="1")
+                  li 
+                    p When a customer chooses the "Bitcoin via BitPay" payment method, they will be presented with an order summary (prices are shown in whatever currency they've selected for shopping). 
+                  li
+                    p Upon confirming their order, the customer will be taken to bitpay.com to pay. Once payment is received, a link is presented that will bring the customer back to your website.
+                  p In your Admin control panel, you can see the orders made via bitcoin just as you could for any other payment method. The status settings selected in the configuration steps above will indicate if the order has been paid.
+                  .note
+                    p This extension does not provide a means of automatically pulling a current BTC exchange rate for presenting BTC prices to shoppers.
+        
+          .column.large-12.text-center.margin-top-more
+            a(href="/dashboard/signup").white.btn.btn-blue-solid.uppercase.bold.arrow.btn-margin Create an Account
+            a(href="https://github.com/bitpay/commerce-seo-plugin").white.btn.btn-blue-solid.uppercase.bold.arrow.btn-margin Get the Plugin
