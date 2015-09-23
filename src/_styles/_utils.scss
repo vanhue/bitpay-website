@@ -81,7 +81,9 @@ $suffixes: (
 .block {
   display: block;
 }
-
+.clear{
+  clear:both;
+}
 .selectable {
   user-select: all;
 }
@@ -91,7 +93,9 @@ $suffixes: (
 .only-text-selectable {
   user-select: text;
 }
-
+.no-padding-left{
+  padding-left:0;
+}
 .radius {
   border-radius: 5px;
 }

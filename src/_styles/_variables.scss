@@ -12,6 +12,7 @@ $gray-dark: #7A7D8C;
 $gray-medium: #929396;
 $gray-light: #DEDFE1;
 $gray-xlight: #FAFAFD;
+$bitpay-blue: #1A3A8B;
 
 //override foundation variables
 $primary-color: $blue-light;
@@ -55,3 +56,14 @@ $accordion-navigation-hover-bg-color: #fff;
 $accordion-navigation-active-bg-color: #fff;
 $accordion-navigation-font-color: $blue-light;
 $accordion-navigation-padding: 0;
+
+
+$breakpoint-classes: (small medium large xlarge);
+
+$breakpoints: (
+small: rem-calc(0),
+medium: rem-calc(640),
+large: rem-calc(1200),
+xlarge: rem-calc(1440),
+xxlarge: rem-calc(1920),
+);
