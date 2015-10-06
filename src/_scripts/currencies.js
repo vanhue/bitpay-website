@@ -60,7 +60,8 @@
     },
     BDT: {
       name: 'Bangladeshi Taka',
-      symbol: '৳'
+      symbol: '৳',
+      sanctioned: true
     },
     BGN: {
       name: 'Bulgarian Lev',
@@ -84,7 +85,8 @@
     },
     BOB: {
       name: 'Bolivian Boliviano',
-      symbol: '$b'
+      symbol: '$b',
+      sanctioned: true
     },
     BRL: {
       name: 'Brasilian Real',
@@ -141,6 +143,11 @@
     CRC: {
       name: 'Costa Rican Colón',
       symbol: '₡'
+    },
+    CUP: {
+      symbol: '$',
+      name: 'Cuban Peso',
+      sanctioned: true
     },
     CVE: {
       name: 'Cape Verdean Escudo',
@@ -258,6 +265,11 @@
       name: 'Iraqi Dinar',
       symbol: 'ع.د'
     },
+    IRR: {
+      name: 'Iranian Rial',
+      symbol: '﷼',
+      sanctioned: true
+    },
     ISK: {
       name: 'Icelandic Króna',
       symbol: 'kr'
@@ -284,7 +296,8 @@
     },
     KGS: {
       name: 'Kyrgystani Som',
-      symbol: 'лв'
+      symbol: 'лв',
+      sanctioned: true
     },
     KHR: {
       name: 'Cambodian Riel',
@@ -293,6 +306,11 @@
     KMF: {
       name: 'Comorian Franc',
       symbol: 'CF'
+    },
+    KPW: {
+      name: 'North Korean Won',
+      symbol: '₩',
+      sanctioned: true
     },
     KRW: {
       name: 'South Korean Won',
@@ -488,7 +506,8 @@
     },
     SDG: {
       name: 'Sudanese Pound',
-      symbol: '£'
+      symbol: '£',
+      sanctioned: true
     },
     SEK: {
       name: 'Swedish Krona',
@@ -524,7 +543,8 @@
     },
     SYP: {
       name: 'Syrian Pound',
-      symbol: '£'
+      symbol: '£',
+      sanctioned: true
     },
     SZL: {
       name: 'Swazi Lilangeni',
@@ -643,6 +663,14 @@
       symbol: 'Z$'
     }
   };
+
+  // Not excluded from BBB, but must be clear BitPay can't process payments for
+  // entities in sanctioned territories.
+  for (var code in currencies){
+    if(currencies[code].sanctioned){
+      delete currencies[code];
+    }
+  }
 
   window.currencies = currencies;
 }(window));
