@@ -42,7 +42,9 @@
   &-bg{
     background: $hue;
   }
-
+  &-dark-bg{
+    background: $hue;
+  }
 }
 .gray-dark {
   color: $gray-dark;
