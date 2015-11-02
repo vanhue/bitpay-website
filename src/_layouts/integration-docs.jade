@@ -1,0 +1,26 @@
+extends primary
+
+block header
+  include ../_includes/docs-header
+
+append vars
+  -var bodyClass = 'white-header';
+  
+block content
+  .row
+    .column.large-8
+      block integration-guide        
+    .column.large-4
+      .h5.uppercase Integration Guides
+      include ../_includes/integration-dropdown
+      img(src="#{imageURL}", alt="#{title}")
+      .h6 Category
+      p #{category}
+      .h6 Website
+      a #{website}
+      .h6 Setup Guide
+      ul
+        li Requirements
+        li Configuration
+    
+  
