@@ -1,85 +1,102 @@
-extends ../_layouts/primary
+block pagevars
+  -var title = "Ingenico Terminal App";
+  -var description = "Accept bitcoin on your Telium-based Ingenico terminal with BitPay's point of sale app.";
+  -var category = "Point of Sale Integration";
+  -var website = "";
+  -var imageURL = "/images/integrations/ingenico.png"
 
-block title
-  title Ingenico App | BitPay
+extends ../_layouts/integration-docs
 
-append vars
-  -var pageSelected = 'Integrations'
+append integration-guide
+  h1 #{title} Plugin
+    p.lead #{description}
+    
+  include:marked magento.md
 
-block content
-  // set background-color to one that matches the brand
-  .section
-    .row
-      .column.large-8
-        h2.header__bottom-border-left Ingenico Terminal App
-        p.lead Accept bitcoin on your Telium-based Ingenico terminal with BitPay's point of sale app.
-      .column.large-4
-        .h2.background-contain(style="background-image: url('/images/integrations/ingenico.png'); width: 6em; height: 2.5em;")
-        h5.bold.uppercase.margin-top-less.margin-bottom-none Category
-        p.margin-bottom Point of Sale Integration
-        a(href="mailto:sales@bitpay.com").arrow.btn.btn.uppercase.bold Request the App
-        br
-    .row.bottom-border-less
-        br
-        br
-        <div class="responsive-youtube">
-        <iframe width="1080" height="540" src="https://www.youtube.com/embed/s4wtmUXrZd8" frameborder="0" allowfullscreen></iframe>
-  
-  .section
-    .row            
-      .column
-        h3.header__bottom-border-left#features Features
-    .row
-      .column.large-4
-        h5 Standalone solution, integration-ready
-        br
-        p Our app for Ingenico works as a standalone device for accepting bitcoin and is also compatible with traditional card payments and point of sale systems
-      .column.large-4
-        h5 Accept bitcoin, receive settlement in your own currency
-        br
-        p Receive bitcoin payments on your Ingenico device and get your funds deposited directly to your bank account by connecting your app to BitPay. 
-      .column.large-4
-        h5 Print bitcoin-ready receipts and daily transaction records
-        br
-        p This app covers all of your basics. Print a transaction receipt with invoice URL and details for our support team, or track your bitcoin transactions day to day. 
-        br
-    .row
-      br
-      .column.large-12.text-center
-        .row
-          a(href="/dashboard/signup").btn.uppercase.bold.arrow.btn-margin Create a BitPay Account
-          a(href="mailto:sales@bitpay.com").btn.uppercase.bold.arrow.btn-margin Request the BitPay Ingenico App
-          br    
-    .row  
-      br
-      .column.large-8
-        br
-        h3.header__bottom-border-left#requirements Setup and Requirements 
-    .row
-      .column.large-12
-        p.lead This app requires no additional hardware beyond a compatible Ingenico device with the following:
-        ul
-          li
-            p Compatibility with Ingenico's Tellium application suite
-          li
-            p Internet connection
-          li 
-            p Minimum 320X240 pixel screen display
-          li
-            p A paired BitPay merchant account
-        p.lead Before you can use a new terminal to accept bitcoin payments, you'll need to link it to your BitPay account.  This process is called “pairing." Here's how to get started: 
-        ol
-          li
-            p Start the BitPay app on your Ingenico device and enter the admin menu.
-          li
-            p Select the #[strong "Pair with BitPay"] option. The app will generate a QR code linked to the login page of your BitPay merchant account.
-          li
-            p Use a QR code scanner on your computer or mobile device to read this code.  The URL pointing to the merchant account login page will be opened by your web browser.
-          li 
-            p Enter your BitPay account credentials (if they are not automatically saved by the web browser or you are logging in to a device for the first time).
-          li
-            p Once logged into your merchant account, you will see that a new API token has been created for your account.
-          li
-            p Select #[strong "Approve"] on your computer or mobile device, then press the green button on your Ingenico terminal to proceed.
-            
-          p.lead Nice work! Your app is paired with your BitPay account. Your customers will now be able to check out with bitcoin using your Ingenico terminal.
+
+
+//- extends ../_layouts/primary
+//- 
+//- block title
+//-   title Ingenico App | BitPay
+//- 
+//- append vars
+//-   -var pageSelected = 'Integrations'
+//- 
+//- block content
+//-   // set background-color to one that matches the brand
+//-   .section
+//-     .row
+//-       .column.large-8
+//-         h2.header__bottom-border-left Ingenico Terminal App
+//-         p.lead Accept bitcoin on your Telium-based Ingenico terminal with BitPay's point of sale app.
+//-       .column.large-4
+//-         .h2.background-contain(style="background-image: url('/images/integrations/ingenico.png'); width: 6em; height: 2.5em;")
+//-         h5.bold.uppercase.margin-top-less.margin-bottom-none Category
+//-         p.margin-bottom Point of Sale Integration
+//-         a(href="mailto:sales@bitpay.com").arrow.btn.btn.uppercase.bold Request the App
+//-         br
+//-     .row.bottom-border-less
+//-         br
+//-         br
+//-         <div class="responsive-youtube">
+//-         <iframe width="1080" height="540" src="https://www.youtube.com/embed/s4wtmUXrZd8" frameborder="0" allowfullscreen></iframe>
+//-   
+//-   .section
+//-     .row            
+//-       .column
+//-         h3.header__bottom-border-left#features Features
+//-     .row
+//-       .column.large-4
+//-         h5 Standalone solution, integration-ready
+//-         br
+//-         p Our app for Ingenico works as a standalone device for accepting bitcoin and is also compatible with traditional card payments and point of sale systems
+//-       .column.large-4
+//-         h5 Accept bitcoin, receive settlement in your own currency
+//-         br
+//-         p Receive bitcoin payments on your Ingenico device and get your funds deposited directly to your bank account by connecting your app to BitPay. 
+//-       .column.large-4
+//-         h5 Print bitcoin-ready receipts and daily transaction records
+//-         br
+//-         p This app covers all of your basics. Print a transaction receipt with invoice URL and details for our support team, or track your bitcoin transactions day to day. 
+//-         br
+//-     .row
+//-       br
+//-       .column.large-12.text-center
+//-         .row
+//-           a(href="/dashboard/signup").btn.uppercase.bold.arrow.btn-margin Create a BitPay Account
+//-           a(href="mailto:sales@bitpay.com").btn.uppercase.bold.arrow.btn-margin Request the BitPay Ingenico App
+//-           br    
+//-     .row  
+//-       br
+//-       .column.large-8
+//-         br
+//-         h3.header__bottom-border-left#requirements Setup and Requirements 
+//-     .row
+//-       .column.large-12
+//-         p.lead This app requires no additional hardware beyond a compatible Ingenico device with the following:
+//-         ul
+//-           li
+//-             p Compatibility with Ingenico's Tellium application suite
+//-           li
+//-             p Internet connection
+//-           li 
+//-             p Minimum 320X240 pixel screen display
+//-           li
+//-             p A paired BitPay merchant account
+//-         p.lead Before you can use a new terminal to accept bitcoin payments, you'll need to link it to your BitPay account.  This process is called “pairing." Here's how to get started: 
+//-         ol
+//-           li
+//-             p Start the BitPay app on your Ingenico device and enter the admin menu.
+//-           li
+//-             p Select the #[strong "Pair with BitPay"] option. The app will generate a QR code linked to the login page of your BitPay merchant account.
+//-           li
+//-             p Use a QR code scanner on your computer or mobile device to read this code.  The URL pointing to the merchant account login page will be opened by your web browser.
+//-           li 
+//-             p Enter your BitPay account credentials (if they are not automatically saved by the web browser or you are logging in to a device for the first time).
+//-           li
+//-             p Once logged into your merchant account, you will see that a new API token has been created for your account.
+//-           li
+//-             p Select #[strong "Approve"] on your computer or mobile device, then press the green button on your Ingenico terminal to proceed.
+//-             
+//-           p.lead Nice work! Your app is paired with your BitPay account. Your customers will now be able to check out with bitcoin using your Ingenico terminal.

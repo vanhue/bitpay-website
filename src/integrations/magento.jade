@@ -1,125 +1,14 @@
-extends ../_layouts/primary
+block pagevars
+  -var title = "Magento";
+  -var description = "Accept bitcoin on your Magento-based e-commerce site with BitPay's open source Magento Plugin.";
+  -var category = "E-commerce Plugin";
+  -var website = "http://www.magentocommerce.com/magento-connect/bitpay-bitcoin-payment-method.html";
+  -var imageURL = "/images/integrations/magento.png"
 
-block title
-  title Magento Plugin | BitPay
+extends ../_layouts/integration-docs
 
-append vars
-  -var pageSelected = 'Integrations'
-
-block content
-  // set background-color to one that matches the brand
-  .section(style="background-color: #c14800;") 
-    .row.white
-      .column.large-8
-        h2.header--bottom-border-left Magento Plugin
-        p.lead Accept bitcoin on your Magento-based e-commerce site with BitPay's open source Magento Plugin.
-      .column.large-4
-        .h2.background-contain(style="background-image: url('/images/integrations/magento-white.png'); width: 6em; height: 2.5em;")
-        h5.bold.uppercase.margin-top-less.margin-bottom-none Category
-        p.margin-bottom E-commerce Plugin
-        a(href="http://www.magentocommerce.com/magento-connect/bitpay-bitcoin-payment-method.html").arrow.white.btn.btn-white-border.uppercase.bold Get the Plugin
-
-  .section.border-bottom-gray
-    .row            
-      .column
-        h3.header--bottom-border-left#bitpay-and-xero BitPay and Magento
-    .row
-      .column.large-4
-        h5 Start selling everywhere.
-        br
-        p If you can ship it there, you can sell it there. Bitcoin can be sent and received anywhere in the world by anyone with an internet connection. 
-      .column.large-4
-        h5 Eliminate fraud and chargebacks.  
-        br
-        p Bitcoin transactions don't contain any sensitive financial or personal information. No chargebacks for your business, no risk of data theft for your customers – everybody wins.
-      .column.large-4
-        h5 Get to checkout in no time flat. 
-        br
-        p BitPay's scan-to-pay bitcoin invoices give your customers a faster, simpler way to pay from any device in seconds – no data entry required. 
-  .section
-    .row
-      .column.large-3.hide-for-small.hide-for-medium(style="position: relative; z-index: 0")
-        ul.side-nav(role="navigation" data-magellan-expedition="fixed" data-options="destination_threshold: -80; toffset_by_height: false;")
-          h4 Guide Contents
-          li
-            a(href="#requirements" data-magellan-arrival="requirements") Requirements
-          li
-            a(href="#installation" data-magellan-arrival="installation") Installation
-          li
-            a(href="#configuration" data-magellan-arrival="configuration") Configuration
-          li
-            a(href="#advanced" data-magellan-arrival="advanced") Advanced
-
-      .column.large-9
-        .row
-          .column
-            h3.header--bottom-border-left#requirements(data-magellan-destination="requirements") Integration Requirements
-            p.lead Get started by #[a.arrow-blue(href="/dashboard/signup") signing up for a BitPay merchant account]
-            .note 
-              p View the #[a(href="https://github.com/bitpay/magento-plugin/blob/master/GUIDE.md#server-requirements") server requirements] for this plugin. 
-
-        .row
-          .column
-            .section.border-bottom-gray#installation(data-magellan-destination="installation")
-              h3.header--bottom-border-left Installing the Plugin
-              .warning
-                p Remember to back up your database before installing extensions.
-              ol(type="1")
-                li
-                  p Go to the #[a(href="http://www.magentocommerce.com/magento-connect/bitpay-payment-method.html") Magento Connect Manager] and click the #[strong "Install Now"] link which will give you the #[strong Extension Key] needed for the next step.
-                  p Once you have the key, log into your Magento Store's Admin Panel and navigate to #[strong "System" &gt; "Magento Connect" &gt; "Magento Connect Manager"].
-                  .note
-                    p The Connect Manager may ask you to log in again using the same credentials that you use to log into the Admin Panel. All you need to do is paste the extension key and click on the #[em "Install"] button.
-                  .warning
-                    p #[strong Very Important:] You must complete remove any previous versions of the Bitpay Magento plugin before installing this new updated version.
-                    p The plugin has been completely re-written to work with BitPay's new cryptographically secure RESTful API and will conflict with any previous plugin versions which use the old API. 
-                    p To help you remove the old plugin files from your system, we have created a convenient shell script for Unix/Linux/Mac OS systems which will scan your webserver for these older files and delete them. You can #[a(href="https://github.com/bitpay/magento-plugin/blob/master/scripts/delete.sh") download this delete script from GitHub].      
-
-        .row
-          .column
-            .section.border-bottom-gray#configuration(data-magellan-destination="configuration") 
-              h3.header--bottom-border-left Connecting BitPay and Magento
-              ol(type="1")
-                li  
-                  p Log in to the admin section of your Magento store. Once logged in, you will find the configuration settings under #[strong System &gt; Configuration &gt; Sales &gt; Payment Methods].
-                  img(src="/images/integrations/details/MagentoSettings.png", alt="Magento Settings").margin-vertical
-                li
-                  p Create a #[a(href="/dashboard/merchant/api-tokens") pairing code] in your BitPay merchant dashboard.
-                li                    
-                  p Copy and paste this pairing code into the #[strong "Pairing Code"] field in your Magento admin dashboard to create an API token for BitPay transactions. 
-                  .note 
-                    p Unused pairing codes are only valid for twenty-four hours. If one expires before you get to use it, you can always create a new one. You will only need to pair once for each installation of the extension.
-
-        .row
-          .column
-            .section#advanced(data-magellan-destination="advanced")
-              h3.header--bottom-border-left Advanced Setup
-
-              h4 Installing the Plugin Using Modman
-              p You can also use the #[a(href="https://github.com/colinmollenhour/modman") modman] module management software to this plugin. 
-              ol(type="1")
-                li 
-                  p Once you have modman installed, run #[code= 'modman init'] if you have not already done so. 
-                li 
-                  p Run #[code= 'modman clone https://github.com/bitpay/magento-plugin.git'] in the root of the Magento installation. In this case it is #[code= '/var/www/magento'].
-
-              h4 Order Status Customization
-              p Configure how BitPay's IPN (Instant Payment Notification) settings change the order status in your Magento store.
-              img(src="/images/integrations/details/MagentoInvoiceSettings.png", alt="Magento Invoice Settings").margin-vertical
-              h4 Transaction Speed Settings
-              p Select a tranasaction speed for bitcoin payments made in your Magento store. 
-                .note 
-                  p This setting only affects the time after which BitPay considers the payment fully confirmed and irrevocable on the Bitcoin network. Your customers will be immediately notified when their payments have been sent, and a typical transaction only takes a few seconds to complete.
-              ul
-                li 
-                  p #[strong "High"] speed confirmations will be sent as soon as a  transaction is received in the Bitcoin network (usually a few seconds). This speed should be used for digital or low-risk items. 
-                li
-                  p #[strong "Medium"] speed confirmations typically take 10 minutes and should be used for fulfillment processes with medium risk or items with median value.
-                li 
-                  p #[strong "Low"] speed confirmations take about 1 hour and should be used for high-value items.
-                  .note
-                    p #[a(href="https://en.bitcoin.it/wiki/Double-spending") Double-spending] on the Bitcoin network is extremely unlikely, but selecting slower transaction speeds will provide the greatest protection against them. 
-
-          .column.large-12.text-center
-            a(href="/dashboard/signup").white.btn.btn-blue-solid.uppercase.bold.arrow.btn-margin Create an Account
-            a(href="http://www.magentocommerce.com/magento-connect/bitpay-payment-method.html").white.btn.btn-blue-solid.uppercase.bold.arrow.btn-margin Get the Plugin
+append integration-guide
+  h1 #{title} Plugin
+    p.lead #{description}
+    
+  include:marked magento.md

@@ -7,20 +7,25 @@ append vars
   -var bodyClass = 'white-header';
   
 block content
-  .row
-    .column.large-8
-      block integration-guide        
-    .column.large-4
-      .h5.uppercase Integration Guides
-      include ../_includes/integration-dropdown
-      img(src="#{imageURL}", alt="#{title}")
-      .h6 Category
-      p #{category}
-      .h6 Website
-      a #{website}
-      .h6 Setup Guide
-      ul
-        li Requirements
-        li Configuration
+  .section
+    .row
+      .column.large-8
+        block integration-guide        
+      .column.large-4
+        .h5.uppercase Integration Guides
+        include ../_includes/integration-dropdown
+        img(src="#{imageURL}", alt="#{title}")
+        .h6 Category
+        p #{category}
+        .h6 Website
+        a(href="#{website}") Visit Website
     
-  
+  .section.bg-lightblue-gradient.border-top-gray
+    .row
+      .column.medium-8.medium-offset-2
+        h2.text-center.white Get Started with the #{title} integration
+        //- h4.text-center.white #{description}
+    .row
+      .column.medium-8.medium-offset-2.text-center
+        a(href="/dashboard/signup").white.btn.btn-blue-solid.uppercase.bold.btn-margin Accept Bitcoin
+        a(href="/features").white.btn.btn-blue-border.uppercase.bold.arrow.btn-margin All Features
