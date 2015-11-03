@@ -7,13 +7,13 @@ append vars
   -var pageSelected = 'Pricing'
 
 block content
-  .section.border-bottom-gray.border-top-gray(style="background:url('/images/node_background.jpg'); background-size:cover;")
+  .section.border-bottom-gray.border-top-gray(style="background:#EEF4FC url('/images/node_background.jpg'); background-size:cover;")
     .row.fade-in
       .column.text-center.margin-bottom
         h1.text-center Join the world’s most trusted 
           span(style="display:block;") Bitcoin payment platform. 
-        p.lead.text-center Simply priced plans for businesses and enterprises.
-        a.btn.orange-bg.border-none.white(href="/dashboard/signup" style="font-size:1.2em; padding:1rem 2.7rem 1rem; margin:30px 0 50px;") Get Started Free
+        p.lead.text-center Simply-priced plans for businesses and enterprises.
+        a.btn.orange-bg.border-none.white.arrow(href="/dashboard/signup" style="font-size:1.2em; padding:1rem 2.7rem 1rem; margin:30px 0 50px;") Get started, free
     .row.margin-top-less
       
       .pricing
@@ -28,7 +28,9 @@ block content
                   div
                     b 30 Transactions / Month
                     br
-                    small 1% Service Fee For Each Additional Transaction
+                    b $1,000 Daily
+                    br
+                    small 1% applied to additional transactions
                   br
                   ul.list-style-none.margin-none
                     li.bold Core Features
@@ -44,32 +46,28 @@ block content
             .row(style="margin:30px 0;")
               .column.large-12.xlarge-4.padding-none
                 h2.text-center.blue-medium(style="font-size:4em; line-height: 0.8;") 1%
-                small.text-center(style="display:block;") Settlement fee
+                //- small.text-center(style="display:block;") Settlement fee
               .column.xlarge-8.large-12.pricing-column
                   div
                     b Unlimited Transactions
                   br
                   ul.list-style-none.margin-none
-                    li.bold Core Features
                     li Single User Login Access
-                    li Email Support
+                    li Priority Email Support
                     li Daily Bitcoin Settlements
-                    li Weekly Bank Settlements
+                    li Daily Bank Settlements
                     br
                     li.bold Premium Features
                     li Premium Settlement Options
                     li Premium Intergrations 
     .row                
-      p.text-center 
-        b Need more? 
-        | Contact us about our 
-        a(href="mailto:sales@bitpay.com") Enterprise 
-        | plan    
+      a(href="/enterprise")
+        h4.margin-top.blue-dark.text-center.arrow-blue Need more? Take a look at our Enterprise Plan
           
   .section.gray.border-bottom-gray.bg-gray
     h2.text-center.header--bottom-border Features
     .row
-      .column.large-8.small-11.small-centered.large-centered.pricing-features
+      .column.large-8.small-11.small-centered.large-centered.pricing-features.radius.border-gray
         .row  
           .column.large-5.bg-white
             div
@@ -77,7 +75,6 @@ block content
               br
               ul.list-style-none.margin-none
                 li Guaranteed Conversion Rate
-                li Customer Support Portal
                 li Email Billing
                 li Hosted Checkout
                 li API Access
@@ -87,9 +84,9 @@ block content
                 li Mobile Checkout App
                 br
                 li.bold Settlement Options
-                li Bitcoin
-                li ACH to USA Banks
-                li SEPA to Euro Banks
+                li Daily Bitcoin Settlements
+                li Weekly ACH to USA Banks
+                li Weekly SEPA to Euro Banks
 
  
           .column.large-7.blue-medium-bg.border-box.end.pricing-table.radius
@@ -126,7 +123,7 @@ block content
           p Our Starter plan offers free, instant conversions for up to 30 transactions a month, weekly settlements in two currencies, and daily settlements  in bitcoin. The Business Plan offers daily settlements in nine currencies and unlimited monthly transactions for a 1% settlement fee.
         div
           h5 Can you process payments for regulated industries?
-          p We are able to process payments for most businesses, but sometimes legal and regulatory concerns prevent us from servicing some industries. We'd like to provide all legal businesses the opportunity to accept bitcoin, and we are constantly working to make that a possibility.
+          p We are able to process payments for most businesses, but sometimes legal and regulatory concerns prevent us from servicing #[a(href="/about/terms#prohibited") some industries]. We'd like to provide all legal businesses the opportunity to accept bitcoin, and we are constantly working to make that a possibility.
       .column.medium-10.medium-offset-1.large-5.large-offset-1
       .column.medium-10.medium-offset-1.large-5.large-offset-0.end
 
