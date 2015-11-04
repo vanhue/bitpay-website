@@ -2,8 +2,8 @@ mixin integration-item(name, url)
   option(value='#{url}') #{name}
 
 select(onChange="window.location.href=this.value")
-  //- +integration-item("3DCart","")
-  +integration-item("Adyen","/integrations/adyen")
+  //- +integration-item("3DCart","3dcart")
+  //- +integration-item("Adyen","/integrations/adyen")
   //- +integration-item("Bitmonet","")
   //- +integration-item("Blesta","")
   //- +integration-item("Coin Vox","")

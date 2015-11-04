@@ -10,7 +10,7 @@ append vars
 block content
   mixin integration(src, href, name)
     .column.small-4.large-3.margin-bottom.end
-      a.h1.background-center.integration-logo(href="#{href}" title="#{name}" style="background-image: url('/images/integrations/#{src}');" target="_blank")
+      a.h1.background-center.integration-logo(href="#{href}" title="#{name}" style="background-image: url('/images/integrations/#{src}');")
       span.small.text-center.block.margin-top-less #{name}
 
   .section.bg-gray.border-vertical-gray
@@ -42,7 +42,7 @@ block content
         .row.small-collapse
           +integration("adyen.png", "/integrations/adyen", "Adyen")
           +integration("demandware.png", "http://marketplace.demandware.com/Bitpay/Bitpay,default,pd.html", "Demandware")
-          +integration("shopify.png", "https://bitpay.com/integrations/shopify", "Shopify")
+          +integration("shopify.png", "/integrations/shopify", "Shopify")
           +integration("paypal.png", "https://www.paypal.com/webapps/mpp/paymentshub", "PayPal")
           +integration("3dcart.png", "https://support.3dcart.com/knowledgebase/article/View/584/44/how-do-i-integrate-my-3dcart-store-with-bitpay", "3DCart")
           +integration("blesta.png", "http://docs.blesta.com/display/user/Bitpay", "Blesta")
@@ -62,22 +62,22 @@ block content
         p.lead BitPay develops and maintains plugins for many of the world’s most popular open-source eCommerce solutions.
       .column.large-7.xlarge-6
         .row.small-collapse
-          +integration("magento.png", "https://bitpay.com/integrations/magento", "Magento")
+          +integration("magento.png", "/integrations/magento", "Magento")
           +integration("ecwid.png", "https://github.com/bitpay/ecwid-plugin", "Ecwid")
           +integration("gravityforms.png", "https://github.com/bitpay/gravityforms-plugin", "Gravity Forms")
           +integration("membershippro.png", "http://premium.wpmudev.org/project/membership/", "Membership Pro")
-          +integration("opencart.png", "https://bitpay.com/integrations/opencart", "OpenCart")
-          +integration("oscommerce.png", "https://bitpay.com/integrations/oscommerce", "OScommerce")
-          +integration("prestashop.png", "https://bitpay.com/integrations/prestashop", "PrestaShop")
-          +integration("drupal.png", "https://bitpay.com/integrations/drupal-commerce", "Drupal Commerce")
+          +integration("opencart.png", "/integrations/opencart", "OpenCart")
+          +integration("oscommerce.png", "/integrations/oscommerce", "OScommerce")
+          +integration("prestashop.png", "/integrations/prestashop", "PrestaShop")
+          +integration("drupal.png", "/integrations/drupal-commerce", "Drupal Commerce")
           +integration("spreecommerce.png", "https://github.com/bitpay/spree-bitpay", "Spree Commerce")
           +integration("ubercart.png", "https://github.com/bitpay/ubercart-plugin", "Ubercart")
-          +integration("virtuemart.png", "https://bitpay.com/integrations/virtuemart", "Virtue Mart")
-          +integration("woocommerce.png", "https://bitpay.com/integrations/woocommerce", "WooCommerce")
-          +integration("wpecommerce.png", "https://bitpay.com/integrations/wordpress", "WordPress eCommerce")
-          +integration("xcart.png", "https://bitpay.com/integrations/xcart", "Xcart")
-          +integration("zencart.png", "https://bitpay.com/integrations/zen-cart", "Zen Cart")
-          +integration("commerceseo.png", "https://bitpay.com/integrations/commerce-seo", "commerce:SEO")
+          +integration("virtuemart.png", "/integrations/virtuemart", "Virtue Mart")
+          +integration("woocommerce.png", "/integrations/woocommerce", "WooCommerce")
+          +integration("wpecommerce.png", "/integrations/wordpress", "WordPress eCommerce")
+          +integration("xcart.png", "/integrations/xcart", "Xcart")
+          +integration("zencart.png", "/integrations/zen-cart", "Zen Cart")
+          +integration("commerceseo.png", "/integrations/commerce-seo", "commerce:SEO")
 
   .section.border-top-gray#pos(data-magellan-destination="pos")
     .row
