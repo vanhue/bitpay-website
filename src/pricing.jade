@@ -7,155 +7,106 @@ append vars
   -var pageSelected = 'Pricing'
 
 block content
-  .section.pricing.bg-gray.border-bottom-gray.border-top-gray
+  .section.border-bottom-gray.border-top-gray(style="background:#EEF4FC url('/images/node_background.jpg'); background-size:cover;")
     .row.fade-in
       .column.text-center.margin-bottom
-        h2.text-center Join the world’s most trusted Bitcoin payment platform. 
-        p.lead.text-center Simply priced plans for businesses and enterprises.
+        h1.text-center Join the world’s most trusted 
+          span(style="display:block;") Bitcoin payment platform. 
+        p.lead.text-center Simply-priced plans for businesses and enterprises.
+        a.btn.orange-bg.border-none.white.arrow(href="/dashboard/signup" style="font-size:1.2em; padding:1rem 2.7rem 1rem; margin:30px 0 50px;") Get started, free
     .row.margin-top-less
       
-      
-      .column.medium-8.medium-offset-2.large-4.large-offset-0.bg-white.border-gray.text-center.margin-bottom.fade-in-right.delay-2(style="position:relative;right:-1px;")
-        .icon.h2.background-contain.margin-less(style="background-image: url('/images/basic_icon.svg'); height: 2.5em;")
-        h3.text-center.light Starter
-        p.text-center Free
-        .row
-          div.border-top-gray(style="height:85px")
-            div(style="padding-top:1em")
-              | 30 Transactions / Month
+      .pricing
+        .large-6.column.fade-in-right.delay-2.min-padding(style="position:relative;right:-1px;")
+          .pricing-table.large-12.column.radius.large-offset-0.bg-white.margin-bottom
+            .row.blue-pale-bg(style="padding:40px 0 25px;")
+              h2.white.text-center.light(style="letter-spacing:1px;") STARTER
+            .row(style="margin:30px 0;")
+              .column.large-12.xlarge-4.padding-none
+                h2.text-center.blue-medium(style="font-size:3em;") Free
+              .column.xlarge-8.large-12.pricing-column
+                  div
+                    b 30 Transactions / Month
+                    br
+                    b Up to $1,000 Daily
+                    br
+                    small 1% applied to additional transactions
+                  br
+                  ul.list-style-none.margin-none
+                    li.bold Core Features
+                    li Single User Login Access
+                    li Email Support
+                    li Daily Bitcoin Settlements
+                    li Weekly Bank Settlements
+                    
+        .large-6.column.fade-in-right.delay-3.min-padding(style="position:relative;right:-1px;")
+          .pricing-table.large-12.column.radius.large-offset-0.bg-white.margin-bottom
+            .row(style="background-color:#204096; padding:40px 0 25px;")
+              h2.white.text-center.light(style="letter-spacing:1px;") BUSINESS
+            .row(style="margin:30px 0;")
+              .column.large-12.xlarge-4.padding-none
+                h2.text-center.blue-medium(style="font-size:4em; line-height: 0.8;") 1%
+                small.text-center(style="display:block;") Transaction Fee
+              .column.xlarge-8.large-12.pricing-column
+                  div
+                    b Unlimited Transactions
+                  br
+                  ul.list-style-none.margin-none
+                    li Multi-User Login Access
+                    li Priority Email Support
+                    li Daily Bitcoin Settlements
+                    li Daily Bank Settlements
+                    br
+                    li.bold Premium Features
+                    li Premium Settlement Options
+                    li Premium Intergrations 
+    .row                
+      a(href="/enterprise")
+        h4.margin-top.blue-dark.text-center.arrow-blue Need more? Take a look at our Enterprise Plan
+          
+  .section.gray.border-bottom-gray.bg-gray
+    h2.text-center.header--bottom-border Features
+    .row
+      .column.large-8.small-11.small-centered.large-centered.pricing-features.radius.border-gray
+        .row  
+          .column.large-5.bg-white
+            div
+              h4 Core Features
               br
-              small 1% Service Fee For Each Additional Transaction
-          div.border-top-gray(style="height:105px")
-            div.padding-vertical-less.bold Login Access
-            div Single User
-          div.border-top-gray(style="height:330px")
-            div.padding-vertical-less.margin-none.bold Core Features
-            ul.list-style-none
-              li Guaranteed Conversion Rate
-              li Customer Support Portal
-              li Email Billing
-              li Hosted Checkout
-              li API Access
-              li CSV Ledger Download
-              li All Open Source Plugins
-              li All Open Source Libraries
-              li Mobile Checkout App
-          div.border-top-gray(style="height:245px")
-            div.padding-vertical-less.margin-none.bold Settlement Options
-            ul.list-style-none
-              li.bold Weekly settlement via:
-              li ACH to USA Banks
-              li SEPA to Euro Banks
-              li.bold Daily settlement via:
-              li Bitcoin
-          div.border-top-gray(style="height:245px")
-            div.padding-vertical-less.margin-none.bold Customer Support
-            div Email Support
-          
-          
-      .column.medium-8.medium-offset-2.large-4.large-offset-0.bg-white.border-gray.text-center.margin-bottom.fade-in-right.delay-4
-        .icon.h2.background-contain.margin-less(style="background-image: url('/images/business_icon.svg'); height: 2.5em;")
-        h3.light Business
-        p.text-center 1% Service Fee
-        .row
-          div(style="height:85px")
-            .border-top-gray.margin-none.bold(style="padding-top:1.8em;") Unlimited Transactions
-          .border-top-gray(style="height:105px")
-            .padding-vertical-less.margin-none.bold Login Access
-            div Multi-User Organization
-          .border-top-gray(style="height:330px")
-            .padding-vertical-less.margin-none.bold Core Features
-            ul.list-style-none
-              li Guaranteed Conversion Rate
-              li Customer Support Portal
-              li Email Billing
-              li Hosted Checkout
-              li API Access
-              li CSV Ledger Download
-              li All Open Source Plugins
-              li All Open Source Libraries
-              li Mobile Checkout App
-          .border-top-gray(style="height:245px")
-            .padding-vertical-less.margin-none.bold Settlement Options
-            ul.list-style-none
-              li.bold Daily settlement via:
-              li ACH to USA Banks
-              li SEPA to Euro Banks
-              li Bitcoin
-              li EFT to Canada Banks
-              li SPEI to Mexico Banks
-          .border-top-gray(style="height:245px")
-            .padding-vertical-less.margin-none.bold Customer Support
-            div Email Support
-          .border-top-gray(style="height:135px")
-            .padding-vertical-less.margin-none.bold Premium Integrations
-            ul.list-style-none
-              li Demandware Cartridge
-              li Quickbooks IIF Download
-          .border-top-gray(style="height:245px")
-            .padding-vertical-less.margin-none.bold Premium Settlement Options
-            ul.list-style-none
-              li.bold Bank transfer to:
-              li the United Kingdom
-              li Brazil
-              li South Africa
-              li Australia
-              li New Zealand
-             
-      .column.medium-8.medium-offset-2.large-4.large-offset-0.bg-white.border-gray.text-center.end.fade-in-right.delay-6(style="position:relative;left:-1px;")
-        .icon.h2.background-contain.margin-less(style="background-image: url('/images/enterprise_icon.svg'); height: 2.5em;")
-        h3.light Enterprise
-        p.text-center 
-          a(href="mailto:sales@bitpay.com") Request Info
-          
-        .row
-          div(style="height:85px")
-            .border-top-gray.padding-vertical-less.margin-none.bold(style="padding-top:1.8em;") Unlimited Transactions
-          .border-top-gray(style="height:105px")
-            .padding-vertical-less.margin-none.bold Login Access
-            div Multi-User Organization
-          .border-top-gray(style="height:330px")
-            .padding-vertical-less.margin-none.bold Core Features
-            ul.list-style-none
-              li Guaranteed Conversion Rate
-              li Customer Support Portal
-              li Email Billing
-              li Hosted Checkout
-              li API Access
-              li CSV Ledger Download
-              li All Open Source Plugins
-              li All Open Source Libraries
-              li Mobile Checkout App
-          .border-top-gray(style="height:245px")
-            .padding-vertical-less.margin-none.bold Settlement Options
-            ul.list-style-none
-              li.bold Daily settlement via:
-              li ACH to USA Banks
-              li SEPA to Euro Banks
-              li Bitcoin
-              li EFT to Canada Banks
-              li SPEI to Mexico Banks
-          .border-top-gray(style="height:245px")
-            .padding-vertical-less.margin-none.bold Customer Support
-            ul.list-style-none
-              li Priority Email Support
-              li Priority Phone Support
-              li Integration Assistance
-              li Account Manager
-              li Optional Weekend Phone Support
-              li Optional 24/7 Phone Support
-          .border-top-gray(style="height:135px")
-            .padding-vertical-less.margin-none.bold Premium Integrations
-            ul.list-style-none
-              li Demandware Cartridge
-              li Quickbooks IIF Download
-          .border-top-gray(style="height:245px")
-            .padding-vertical-less.margin-none.bold Premium Settlement Options
-            ul.padding-top-less.list-style-none
-              li &nbsp;
-              li Bank transfers available
-              li to all permissible countries
-            
+              ul.list-style-none.margin-none
+                li Guaranteed Conversion Rate
+                li Email Billing
+                li Hosted Checkout
+                li API Access
+                li CSV Ledger Download
+                li All Open Source Plugins
+                li All Open Source Libraries
+                li Mobile Checkout App
+                br
+                li.bold Settlement Options
+                li Daily Bitcoin Settlements
+                li Weekly ACH to USA Banks
+                li Weekly SEPA to Euro Banks
+
+ 
+          .column.large-7.blue-medium-bg.border-box.end.pricing-table.radius
+            div.white.row
+              h4.white Premium Features
+              br
+              
+              ul.list-style-none.margin-none
+                li Business plan includes all core features plus:
+                br
+                li.bold Integrations
+                li Demandware Cartridge
+                li Quickbooks IIF Download
+                br
+                li.bold Settlement Options
+                li SPEI to Mexico Banks
+                li EFT to Canada Banks
+                br
+                li Bank transfer to:
+                li UK, Brazil, South Africa, Australia, New Zealand
   .section
     .row
       .column.medium-10.medium-offset-1.large-5.large-offset-1
@@ -172,7 +123,7 @@ block content
           p Our Starter plan offers free, instant conversions for up to 30 transactions a month, weekly settlements in two currencies, and daily settlements  in bitcoin. The Business Plan offers daily settlements in nine currencies and unlimited monthly transactions for a 1% settlement fee.
         div
           h5 Can you process payments for regulated industries?
-          p We are able to process payments for most businesses, but sometimes legal and regulatory concerns prevent us from servicing some industries. We'd like to provide all legal businesses the opportunity to accept bitcoin, and we are constantly working to make that a possibility.
+          p We are able to process payments for most businesses, but sometimes legal and regulatory concerns prevent us from servicing #[a(href="/about/terms#prohibited") some industries]. We'd like to provide all legal businesses the opportunity to accept bitcoin, and we are constantly working to make that a possibility.
       .column.medium-10.medium-offset-1.large-5.large-offset-1
       .column.medium-10.medium-offset-1.large-5.large-offset-0.end
 
