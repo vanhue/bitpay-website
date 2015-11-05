@@ -1,7 +1,9 @@
 mixin integration-item(name, url)
   option(value='#{url}') #{name}
 
-select(onChange="window.location.href=this.value")
+select(onChange="window.location.href=this.value" selected="Select Integration Guide")
+  +integration-item("Select Integration Guide","#")
+  +integration-item("---","#")
   //- +integration-item("3DCart","3dcart")
   //- +integration-item("Adyen","/integrations/adyen")
   //- +integration-item("Bitmonet","")
@@ -48,3 +50,4 @@ select(onChange="window.location.href=this.value")
   +integration-item("Wordpress","/integrations/wordpress")
   +integration-item("Xcart","/integrations/xcart")
   +integration-item("ZenCart","/integrations/zen-cart")
+  

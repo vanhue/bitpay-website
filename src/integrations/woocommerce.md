@@ -1,13 +1,13 @@
 ## Integration Requirements
-Get started by signing up for a BitPay merchant account
+Get started by [signing up for a BitPay merchant account.](https://bitpay.com/dashboard/signup)
 
-You must also have already installed the Woocommerce plugin from the WordPress Plugin Directory.
+You must also have already installed the [Woocommerce plugin](https://wordpress.org/plugins/woocommerce/) from the WordPress Plugin Directory.
 
-**NOTE:** View the server requirements for this plugin.
+**NOTE:** View the [server requirements](https://github.com/bitpay/woocommerce-plugin/blob/master/GUIDE.md#server-requirements) for this plugin.
 
 ## Installing the Plugin
 
-1. Download the latest version of the BitPay plugin for Woocommerce.
+1. [Download the latest version](https://github.com/bitpay/woocommerce-plugin/releases) of the BitPay plugin for Woocommerce.
 
 2. Navigate to your WordPress Admin Panel and select Plugins > Add New > Upload Plugin.
 
@@ -21,7 +21,7 @@ You must also have already installed the Woocommerce plugin from the WordPress P
 1. Log in to your WordPress admin panel and select "WooCommerce" > "Settings" > "Checkout" > "BitPay" to access the configuration settings for the plugin.
 
 You can also access the configuration settings by navigating to "Plugins" and clicking the "Settings" link for this plugin.
-2. Create a pairing code in your BitPay merchant dashboard.
+2. [Create a pairing code](https://bitpay.com/dashboard/login/eyJ0b1N0YXRlTmFtZSI6Im1lbnUuZGFzaGJvYXJkIiwidG9QYXJhbXMiOnsicGFnZSI6ImFwaS10b2tlbnMifX0=) in your BitPay merchant dashboard.
 3. Copy and paste this pairing code into the "Pairing Code" field in your WordPress plugin admin dashboard to create an API token for BitPay transactions.
 
 **NOTE:** Pairing codes are only valid for a short period of time. If a code expires before you get to use it, you can always create a new one and pair with it.

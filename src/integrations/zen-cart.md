@@ -1,10 +1,10 @@
 ## Integration Requirements
-Get started by signing up for a BitPay merchant account
+Get started by [signing up for a BitPay merchant account.](https://bitpay.com/dashboard/signup)
 
-'You must also already have the Zen Cart shopping cart software installed.
+'You must also already have the [Zen Cart shopping cart software](https://www.zen-cart.com/) installed.
 
 ## Installing the Plugin
-1. Download the latest version of the BitPay plugin for Zen Cart.
+1. [Download the latest version](https://github.com/bitpay/zencart-plugin/releases)of the BitPay plugin for Zen Cart.
 2. Unzip the downloaded file and copy its contents into the Zen Cart directory of your web server to complete installation.
 
 ## Connecting BitPay and Zen Cart
@@ -12,15 +12,15 @@ Get started by signing up for a BitPay merchant account
 
 2. Verify that the "Bitcoins" module is enabled.
 
-3. Create an API Key in your BitPay merchant dashboard.
+3. [Create an API Key](https://bitpay.com/dashboard/login/eyJ0b1N0YXRlTmFtZSI6Im1lbnUuZGFzaGJvYXJkIiwidG9QYXJhbXMiOnsicGFnZSI6ImFwaS10b2tlbnMifX0=) in your BitPay merchant dashboard.
 
 4. Copy and paste the API Key into the required field to pair your accounts.
 
-**NOTE:** Pairing codes are only valid for a short period of time. If a code expires before you get to use it, you can always create a new one and pair with it. You will only need to pair once.
+<div class="note">Pairing codes are only valid for a short period of time. If a code expires before you get to use it, you can always create a new one and pair with it. You will only need to pair once.</div>
 
 5. Select a transaction speed.
 
-**NOTE:** This setting only affects the time after which BitPay considers the payment fully confirmed and irrevocable on the Bitcoin network. You and your customer will be immediately notified when a payment is sent, and a typical transaction only takes a few seconds to complete.
+<div class="note">This setting only affects the time after which BitPay considers the payment fully confirmed and irrevocable on the Bitcoin network. You and your customer will be immediately notified when a payment is sent, and a typical transaction only takes a few seconds to complete.</div>
 
 - "High": A payment confirmation will be sent as soon as a transaction is received in the Bitcoin network (usually a few seconds). This speed should be used for digital or low-risk items.
 
@@ -28,7 +28,7 @@ Get started by signing up for a BitPay merchant account
 
 - "Low" speed confirmations take about 1 hour and should be used for high-value items.
 
-**NOTE:** Double-spending on the Bitcoin network is extremely difficult, but selecting slower transaction speeds will provide the greatest protection against them.
+<div class="note">Double-spending on the Bitcoin network is extremely difficult, but selecting slower transaction speeds will provide the greatest protection against them.</div>
 
 6. Choose a status for unpaid and paid orders (or leave the default values as defined).
 

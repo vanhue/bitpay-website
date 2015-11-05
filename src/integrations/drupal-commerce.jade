@@ -1,9 +1,11 @@
 block pagevars
-  -var title = "Drupal-Commerce Plugin";
+  -var title = "Drupal-Commerce";
   -var description = "Accept bitcoin on your e-commerce site with BitPay's open source plugin for Drupal Commerce.";
   -var category = "E-commerce Plugin";
-  -var website = "";
+  -var website = "https://drupalcommerce.org/download";
   -var imageURL = "/images/integrations/drupal.png"
+  -var downloadURL = "https://github.com/bitpay/commerce-seo-plugin"
+  -var cta = "Download Plugin"
 
 extends ../_layouts/integration-docs
 
@@ -11,4 +13,4 @@ append integration-guide
   h1 #{title} Plugin
     p.lead #{description}
     
-  include:marked commerce-seo.md
+  include:marked drupal-commerce.md
