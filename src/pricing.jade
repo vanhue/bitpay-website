@@ -14,15 +14,12 @@ block content
           span(style="display:block;") Bitcoin payment platform. 
         p.lead.text-center Simply-priced plans for businesses and enterprises.
         a.btn.orange-bg.border-none.white.arrow(href="/dashboard/signup" style="font-size:1.2em; padding:1rem 2.7rem 1rem; margin:30px 0 50px;") Get started, free
-    .row.margin-top-less
-      
-      .pricing
-        .large-6.column.fade-in-right.delay-2.min-padding(style="position:relative;right:-1px;")
-          .pricing-table.large-12.column.radius.large-offset-0.bg-white.margin-bottom
-            
-            .row.blue-pale-bg(style="padding:40px 0 25px;")
-              h2.white.text-center.light(style="letter-spacing:1px;") STARTER
-            
+    
+    .row.margin-top-less.pricing
+        .column.large-6.fade-in-right.delay-2.min-padding
+          .pricing-table.radius.bg-white.margin-bottom
+            .row.blue-pale-bg.padding-vertical
+              h2.white.text-center.light.letter-spacing-1.uppercase  Starter
             .row
               .column.large-12.text-center.border-bottom-gray
                   .top-panel.margin-vertical
@@ -53,10 +50,10 @@ block content
                   li.bold Support
                   li Email Support
                     
-        .large-6.column.fade-in-right.delay-3.min-padding(style="position:relative;right:-1px;")
-          .pricing-table.large-12.column.radius.large-offset-0.bg-white.margin-bottom
+        .column.large-6.fade-in-right.delay-3.min-padding
+          .pricing-table.radius.bg-white.margin-bottom
             .row(style="background-color:#204096; padding:40px 0 25px;")
-              h2.white.text-center.light.uppercase(style="letter-spacing:1px;") Business
+              h2.white.text-center.light.uppercase.letter-spacing-1 Business
             .row
               .column.large-12.text-center.border-bottom-gray
                   .top-panel.margin-vertical
@@ -70,8 +67,9 @@ block content
 
             .row.text-center
               .column.large-12.margin-vertical
-                ul.list-style-none.margin-none.padding-horizontal-most
-                  .bold * All the Core Features of the Starter Plan Plus:
+                ul.list-style-none.margin-none.padding-horizontal
+                  .bold * All the Core Features of <br />the Starter Plan Plus:
+                  br 
                   li Multi-User Login Access
                   li Priority Email Support
                   li Demandware Cartridge
@@ -81,65 +79,24 @@ block content
                   li Daily Bitcoin Settlements
                   small (All Supported Countries)
                   li Daily Bank Settlements
-                  small (EFT to Canada, SPEI to Mexico, ACH to USA, SEPA to Euro)
+                  small (EFT to Canada, SPEI to Mexico,<br /> ACH to USA, SEPA to Euro)
                   li Bank Transfers to:
                   small (UK, BRA, ZAF, AUS, NZL)
         
-    .row
-      .columm.large-12
-        h4.margin-top.blue-dark.text-center.arrow-blue Need more? Take a look at our Enterprise Plan or Contact Us
-        //- p Our E
-        //- ul
-        //-   li Dedicated Account Manager
-        //-   li Bank transfers to all permissible countries
-        //-   li Masspay & Payroll solutions
-        //-   li Additional platform customization
-        //- 
+      .text-center
+        .enterprise-card.bg-blue.white.radius.fade-in-right.delay-4
+          .row
+              h4.uppercase.margin-vertical-less Enterprise Plan
+              ul.remove-bullets.margin-bottom-none
+                li Dedicated Account Manager
+                li Bank transfers to all permissible countries
+                li Masspay & Payroll solutions
+                li Additional platform customization
+              .margin-top-less.margin-bottom
+                a(href="mailto:sales@bitpay.com").arrow.white.btn.btn-blue-border.uppercase.bold.margin-left-less.btn-margin Contact Us
+                br
+                a(href="/enterprise").white Learn More
 
-          
-  //- .section.gray.border-bottom-gray.bg-gray
-  //-   h2.text-center.header--bottom-border Features
-  //-   .row
-  //-     .column.large-8.small-11.small-centered.large-centered.pricing-features.radius.border-gray
-  //-       .row  
-  //-         .column.large-5.bg-white
-  //-           div
-  //-             h4 Core Features
-  //-             br
-  //-             ul.list-style-none.margin-none
-  //-               li Guaranteed Conversion Rate
-  //-               li Email Billing
-  //-               li Hosted Checkout
-  //-               li API Access
-  //-               li CSV Ledger Download
-  //-               li All Open Source Plugins
-  //-               li All Open Source Libraries
-  //-               li Mobile Checkout App
-  //-               br
-  //-               li.bold Settlement Options
-  //-               li Daily Bitcoin Settlements
-  //-               li Weekly ACH to USA Banks
-  //-               li Weekly SEPA to Euro Banks
-  //- 
-  //- 
-  //-         .column.large-7.blue-medium-bg.border-box.end.pricing-table.radius
-  //-           div.white.row
-  //-             h4.white Premium Features
-  //-             br
-  //-             
-  //-             ul.list-style-none.margin-none
-  //-               li Business plan includes all core features plus:
-  //-               br
-  //-               li.bold Integrations
-  //-               li Demandware Cartridge
-  //-               li Quickbooks IIF Download
-  //-               br
-  //-               li.bold Settlement Options
-  //-               li SPEI to Mexico Banks
-  //-               li EFT to Canada Banks
-  //-               br
-  //-               li Bank transfer to:
-  //-               li UK, Brazil, South Africa, Australia, New Zealand
   .section
     .row
       .column.medium-10.medium-offset-1.large-5.large-offset-1

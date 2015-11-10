@@ -179,3 +179,13 @@ input[type="search"] {
     @extend .margin-bottom;
   }
 }
+
+.enterprise-card {
+  max-width: 440px;
+  margin: 1.875rem;
+  margin-left: auto;
+  margin-right: auto;
+  @media #{$small-up} {
+    text-align: center;
+  }
+}
