@@ -15,7 +15,7 @@ You must also have already installed the [WP eCommerce plugin](https://wordpress
 ## Connecting BitPay and WP eCommerce
 1. Log into your WordPress admin panel and select **"Settings" > "Store" > "Payments".**
 
-![wp-step-1](../images/integrations/details/wpecommercestep1.png)
+![wp-step-1](/images/integrations/details/wpecommercestep1.png)
 
 2. Check the box for **"Bitcoin Payments by BitPay"** to activate it and click **"Save Changes"** below.
 
@@ -27,11 +27,11 @@ You must also have already installed the [WP eCommerce plugin](https://wordpress
 
 5. Create a pairing code in your BitPay merchant dashboard.
 
-![wp-step-1](../images/integrations/details/wpecommercestep3.png)
+![wp-step-1](/images/integrations/details/wpecommercestep3.png)
 
 6. Copy and paste this pairing code into the **"Pairing Code"** field in your WordPress plugin admin dashboard to create an API token for BitPay transactions.
 
-![wp-step-1](../images/integrations/details/wpecommercestep4.png)
+![wp-step-1](/images/integrations/details/wpecommercestep4.png)
 
 7. Select **"Update"** to save all configured settings.
 
