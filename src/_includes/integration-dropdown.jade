@@ -1,7 +1,7 @@
 mixin integration-item(name, url)
   option(value='#{url}') #{name}
 
-select(onChange="window.location.href=this.value" selected="Select Integration Guide")
+select(onChange="window.location.href=this.value" selected="Select Integration Guide").margin-top-less.radius
   +integration-item("Select Integration Guide","#")
   +integration-item("---","#")
   //- +integration-item("3DCart","3dcart")

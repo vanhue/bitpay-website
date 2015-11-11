@@ -14,12 +14,12 @@ block content
       .column.large-4.small-12
         .h5.uppercase Integration Guides
         include ../_includes/integration-dropdown
-        img(src="#{imageURL}", alt="#{title}")
+        img(src="#{imageURL}", alt="#{title}" style="max-width:80%").padding-vertical-less
         .h6 Category
         p #{category}
         .h6 Website
         a(href="#{website}") Visit Website
-        a(href="#{downloadURL}").white.btn.btn-blue-solid.uppercase.bold.btn-margin.block.text-center #{cta}
+        a(href="#{downloadURL}").white.btn.btn-blue-solid.uppercase.bold.btn-margin.block.text-center.margin-top #{cta}
         
   .section.bg-lightblue-gradient.border-top-gray
     .row
