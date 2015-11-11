@@ -101,6 +101,7 @@ $suffixes: (
 .circle {
   border-radius: 50%;
 }
+
 .pricing-table{
 overflow: hidden;
 
@@ -118,4 +119,9 @@ overflow: hidden;
 }
 .border-none{
   border:none;
+}
+
+.remove-bullets {
+  list-style: none;
+  margin-left: 0;
 }
