@@ -21,7 +21,7 @@ You must also have already installed the [VirtueMart store software](http://virt
 
 3. [Create an API Key](https://bitpay.com/dashboard/login/eyJ0b1N0YXRlTmFtZSI6Im1lbnUuZGFzaGJvYXJkIiwidG9QYXJhbXMiOnsicGFnZSI6ImFwaS10b2tlbnMifX0=) in your BitPay merchant dashboard.
 
-![virtuemart-step-1](../images/integrations/details/virtuemartstep6.png)
+![virtuemart-step-1](/images/integrations/details/virtuemartstep6.png)
 
 4. Navigate to "Configuration" in the Extension Manager menu. Copy and paste this API Key ID to pair with your BitPay account.
 

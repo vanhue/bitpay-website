@@ -3,7 +3,7 @@
   height: 25px;
   margin-bottom: 0.4rem;
   display: inline-block;
-  background-image: url('../images/bitpay-logo-dark.svg');
+  background-image: url('/images/bitpay-logo-dark.svg');
   background-repeat: no-repeat;
   z-index: 2;
   position: relative;
@@ -11,10 +11,10 @@
     margin-bottom: 1.4rem;
   }
   .white-header & {
-    background-image: url('../images/bitpay-logo-primary.svg');
+    background-image: url('/images/bitpay-logo-primary.svg');
   }
   .documentation & {
-    background-image: url('../images/bitpay-logo-documentation.svg');
+    background-image: url('/images/bitpay-logo-documentation.svg');
   }
 }
 
