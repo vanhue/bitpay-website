@@ -192,6 +192,9 @@ input[type="search"] {
 
 .promotion-banner {
   padding: .75em 0;
+  @media #{$small-only} {
+    display: none;
+  }
 }
 
 .new-label {
