@@ -189,3 +189,23 @@ input[type="search"] {
     text-align: center;
   }
 }
+
+.promotion-banner {
+  padding: .75em 0;
+}
+
+.new-label {
+  @extend .white;
+  font-size: 1em;
+  display: inline-block;
+  background: #3BC36B;
+  background-image: linear-gradient(-180deg, #58E49A 0%, #3BC36B 100%);
+  border-radius: 100px;
+  padding: 0 10px 1px;
+  border-radius: 15px;
+  position: relative;
+  top: -2px;
+  margin-right: 10px;
+  letter-spacing: 1px;
+  text-shadow: 0px 1px 0px rgba(0,0,0,0.16);
+}
