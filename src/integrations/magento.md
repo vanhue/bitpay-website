@@ -22,7 +22,7 @@ To help you remove the old plugin files from your system, we have created a conv
 ## Connecting BitPay and magento
 1. Log in to the admin section of your Magento store. Once logged in, you will find the configuration settings under System > Configuration > Sales > Payment Methods.
 
-![magento-step-1](/images/integrations/details/Magentosettings.png)
+![magento-step-1](/images/integrations/details/magento-settings.png)
 
 2. Create a [Pairing Code](https://bitpay.com/dashboard/login/eyJ0b1N0YXRlTmFtZSI6Im1lbnUuZGFzaGJvYXJkIiwidG9QYXJhbXMiOnsicGFnZSI6ImFwaS10b2tlbnMifX0=) in your BitPay merchant dashboard.
 3. Copy and paste this pairing code into the "Pairing Code" field in your Magento admin dashboard to create an API token for BitPay transactions.
@@ -40,7 +40,7 @@ You can also use the [modman](https://github.com/colinmollenhour/modman) module 
 ### Order Status Customization
 Configure how BitPay's IPN (Instant Payment Notification) settings change the order status in your Magento store.
 
-![magento-step-1](/images/integrations/details/MagentoInvoicesettings.png)
+![magento-step-1](/images/integrations/details/magento-invoice-settings.png)
 
 ### Transaction Speed settings
 Select a transactions speed for bitcoin payments made in your Magento store.
