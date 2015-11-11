@@ -141,3 +141,13 @@ code {
 .list-style-none li {
   list-style-type: none;
 }
+
+
+
+.side-nav li {
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+  &.divider {
+    height: 1em;
+  }
+}
