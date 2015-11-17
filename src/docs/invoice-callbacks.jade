@@ -44,7 +44,7 @@ block information
     |     }
     | }
   
-  p The primary purpose of an IPN is to reconcile a BitPay payment transaction with the customer order on the merchants eCommerce server. The BitPay server sends IPNs for each invoice according to the setting within the invoice.
+  p The primary purpose of an IPN is to alert the merchant’s ecommerce server that a BitPay invoice status has changed. The BitPay server sends IPNs for each invoice according to the transaction speed setting within the invoice.
   
   p The BitPay server attempts to send IPNs multiple times until the send is either successful or the BitPay server gives up. The BitPay server attempts retries on the following schedule.
 
@@ -58,14 +58,9 @@ block information
   
   p The BitPay server considers a status code #[code 200] response to be a successful send. The BitPay server does not follow redirects.
 
-  p The invoice status that is sent with the IPN is the status at the time of IPN delivery (not the status at the time IPN was first attempted). IPNs need to be handled idiomatically (as they can be resent) and you should not assume you will receive an IPN for every invoice status (i.e., if you receive an invoice status of #[code complete] then you can assume that the invoice has been #[code paid] and can do whatever you would have done if you received a #[code paid] status).
+  p The invoice status that is sent with the IPN is the status at the time of IPN delivery (not the status at the time IPN was first attempted). IPNs need to be handled idiomatically (as they can be resent) and you should not assume you will receive an IPN for every invoice status.
   
-  p The BitPay server publishes a list of IP addresses for the origination of IPN POST messages (a whitelist). The content of the whitelist can change at any time and without notice. If your implementation references the BitPay IP whitelist then you should implement logic to consider that the list may have changed if you suspect that IPNs are no longer being received by your server. The BitPay IP whitelist is published at #[a(href="https://bitpay.com/ipAddressList.txt") bitpay.com/ipAddressList.txt].
-
-  p The format of the BitPay IP whitelist is as follows and may include any number of IP address entries: 
-  
-  pre.margin-bottom.
-    &lt;ip-addr&gt;|&lt;ip-addr&gt;|&lt;ip-addr&gt; ...
+  p We would advise you to open a non-standard port and specify that port within the notificationURL so that you can use BitPay's Instant Payment Notifications (IPNs) as a trigger to call the BitPay API directly for a status update on the relevant invoice (using a GET call to the invoice resource, as documented in https://bitpay.com/api#resource-Invoices). The GET call provides a secure channel to BitPay's server.  
 
   h3 IPN Troubleshooting
   
