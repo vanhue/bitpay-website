@@ -3,11 +3,11 @@ include ../_mixins/jademin
 -var bodyClass = '';
 block vars
   //- TODO
-  
+
 block pagevars
 
 doctype html
-html(lang='en')
+html(lang='en' ng-csp)
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
@@ -48,13 +48,14 @@ html(lang='en')
     // Tile icon for Win8 (144x144 + tile color)
     meta(name='msapplication-TileImage' content='/images/touch/ms-touch-icon-144x144-precomposed.png')
     meta(name='msapplication-TileColor' content='#1D3E92')
-    
+
     // Favicon
     link(rel="shortcut icon" href="/favicon.ico")
-    
+
     link(rel='stylesheet' href='/styles/main.css' data-instant-track)
     link(rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Karla:400,400italic,700')
-    include ../_includes/head.html
+    +jademin('/scripts/analytics.min.js')
+      script(src='/_scripts/analytics.js')
 
   body
     .off-canvas-wrap.container(class='#{bodyClass}' data-offcanvas)
@@ -66,9 +67,9 @@ html(lang='en')
 
         block footer
           include ../_includes/footer
-      
+
         a.exit-off-canvas
-    
+
     block scripts
       +jademin('/scripts/main.min.js')
         script(src='/jquery/dist/jquery.js')
