@@ -60,7 +60,7 @@ block information
 
   p The invoice status that is sent with the IPN is the status at the time of IPN delivery (not the status at the time IPN was first attempted). IPNs need to be handled idiomatically (as they can be resent) and you should not assume you will receive an IPN for every invoice status.
   
-  p We would advise you to open a non-standard port and specify that port within the notificationURL so that you can use the IPN as a trigger to call the API directly for a status update on the relevant invoice (using a GET call to the invoice resource, as documented in https://bitpay.com/api#resource-Invoices). The GET call provides a secure channel to BitPay's server.  
+  p We would advise you to open a non-standard port and specify that port within the notificationURL so that you can use the IPN as a trigger to call the API directly for a status update on the relevant invoice (using a GET call to the invoice resource, as documented in https://bitpay.com/api#resource-Invoices). This provides additional security in verifying paid orders.
 
   h3 IPN Troubleshooting
   
