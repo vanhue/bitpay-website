@@ -88,3 +88,10 @@ $animation-distance: 1rem;
     transform: scale(1);
   }
 }
+.fade-in-fast {
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}

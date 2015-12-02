@@ -1,0 +1,19 @@
+append vars
+  -var pageSelected = 'Docs'
+
+block pagevars
+  -var title = "WordPress eCommerce Plugin";
+  -var description = "Accept bitcoin on your WordPress site with BitPay's open source extension to the WP eCommerce Plugin.";
+  -var category = "E-commerce Plugin";
+  -var website = "https://wordpress.org/plugins/wp-e-commerce/";
+  -var imageURL = "/images/integrations/wpecommerce.png"
+  -var downloadURL = "https://github.com/bitpay/wordpress-ecommerce-plugin/releases"
+  -var cta = "Download Plugin"
+
+extends ../_layouts/integration-docs
+
+append integration-guide
+  h1 #{title} Plugin
+    p.lead #{description}
+    
+  include:marked wordpress.md

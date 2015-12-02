@@ -7,73 +7,121 @@ append vars
   -var pageSelected = 'Pricing'
 
 block content
-  .section.bg-gray.border-bottom-gray.border-top-gray
+  .section.border-bottom-gray.border-top-gray(style="background:#EEF4FC url('/images/node_background.jpg'); background-size:cover;")
     .row.fade-in
       .column.text-center.margin-bottom
-        h2.text-center Free &amp; Unlimited Processing, Forever.
-        p.lead.text-center Simple plans for business and enterprise features.
-    .row.margin-top-less
-      .column.medium-8.medium-offset-2.large-4.large-offset-0.bg-white.border-gray.text-center.margin-bottom.fade-in-right.delay-2
-        .icon.h2.background-contain.margin-less(style="background-image: url('/images/basic_icon.svg'); height: 2.5em;")
-        h3.text-center.light Basic
-        p.text-center $0
-        .row
-          p.border-top-gray.padding-vertical-less.margin-none.bold Unlimited Processing Volume
-          p.border-top-gray.padding-vertical-less.margin-none.bold Free, instant Conversion
-          p.border-top-gray.padding-vertical-less.margin-none.bold Daily Bank Deposit
-          p.border-top-gray.padding-vertical-less.margin-none.bold Retail POS Solutions
-          p.border-top-gray.padding-vertical-less.margin-none.bold 22 eCommerce Solutions
-          p.border-top-gray.padding-vertical-less.margin-none.bold Email Support
-      .column.medium-8.medium-offset-2.large-4.large-offset-0.bg-white.border-gray.text-center.margin-bottom.fade-in-right.delay-4
-        .icon.h2.background-contain.margin-less(style="background-image: url('/images/business_icon.svg'); height: 2.5em;")
-        h3.light Business
-        p.text-center $300
-        .row
-          p.border-top-gray.padding-vertical-less.margin-none.bold Unlimited Processing Volume
-          p.border-top-gray.padding-vertical-less.margin-none.bold Free, Instant Conversion
-          p.border-top-gray.padding-vertical-less.margin-none.bold Daily Bank Deposit
-          p.border-top-gray.padding-vertical-less.margin-none.bold Retail POS Solutions
-          p.border-top-gray.padding-vertical-less.margin-none.bold 22 eCommerce Solutions
-          p.border-top-gray.padding-vertical-less.margin-none.bold Email Support
-          p.border-top-gray.padding-vertical-less.margin-none Phone &amp; Email Support
-          p.border-top-gray.padding-vertical-less.margin-none Quickbooks Sales Integration
-          p.border-top-gray.padding-vertical-less.margin-none Dedicated Account Manager
-      .column.medium-8.medium-offset-2.large-4.large-offset-0.bg-white.border-gray.text-center.end.fade-in-right.delay-6
-        .icon.h2.background-contain.margin-less(style="background-image: url('/images/enterprise_icon.svg'); height: 2.5em;")
-        h3.light Enterprise
-        p.text-center 
-          a(href="mailto:sales@bitpay.com") Request Info
-        .row
-          p.border-top-gray.padding-vertical-less.margin-none.bold Unlimited Processing Volume
-          p.border-top-gray.padding-vertical-less.margin-none.bold Free, instant Conversion
-          p.border-top-gray.padding-vertical-less.margin-none.bold Daily Bank Deposit
-          p.border-top-gray.padding-vertical-less.margin-none.bold Retail POS Solutions
-          p.border-top-gray.padding-vertical-less.margin-none.bold 22 eCommerce Solutions
-          p.border-top-gray.padding-vertical-less.margin-none.bold Email Support
-          p.border-top-gray.padding-vertical-less.margin-none Phone &amp; Email Support
-          p.border-top-gray.padding-vertical-less.margin-none Quickbooks Sales Integration
-          p.border-top-gray.padding-vertical-less.margin-none Dedicated Account Manager
-          p.border-top-gray.padding-vertical-less.margin-none VPN Access
-          p.border-top-gray.padding-vertical-less.margin-none Engineering &amp; Integration Services
+        h1.text-center Join the world’s most trusted 
+          span(style="display:block;") Bitcoin payment platform. 
+        p.lead.text-center Simply-priced plans for businesses and enterprises.
+        a.btn.orange-bg.border-none.white.arrow(href="/dashboard/signup" style="font-size:1.2em; padding:1rem 2.7rem 1rem; margin:30px 0 50px;") Get started, free
+    
+    .row.margin-top-less.pricing
+        .column.large-6.fade-in-right.delay-2.min-padding
+          .pricing-table.radius.bg-white.margin-bottom
+            .row.blue-pale-bg.padding-vertical
+              h2.white.text-center.light.letter-spacing-1.uppercase  Starter
+            .row
+              .column.large-12.text-center.border-bottom-gray
+                  .top-panel.margin-vertical
+                    h2.text-center.blue-medium(style="font-size:3em;") Free
+                    div
+                      b 30 Transactions / Month
+                      br
+                      b Up to $1,000 Daily
+                      br
+                      small 1% applied to additional transactions
+            .row.text-center
+              .column.large-12.margin-vertical
+                ul.list-style-none.margin-none
+                  li
+                    h4 Features
+                  li Payment &amp; Refund Management
+                  li Payment Tools
+                  li Shopping Cart Plugins
+                  li API, Libraries, &amp; SDKs
+                  li CSV Ledger Download
+                  li Hosted Solutions
+                  br
+                  li
+                    h4 Settlement
+                  li Weekly USD/EUR Settlements:
+                  small USA (ACH) &amp; Euro (SEPA)
+                  li Daily Bitcoin Settlements:
+                  small All 240 Supported Countries
+
+                    
+        .column.large-6.fade-in-right.delay-3.min-padding
+          .pricing-table.radius.bg-white.margin-bottom
+            .row.padding-vertical.bg-blue
+              h2.white.text-center.light.uppercase.letter-spacing-1 Business
+            .row
+              .column.large-12.text-center.border-bottom-gray
+                  .top-panel.margin-vertical
+                    h2.blue-medium(style="font-size:4em; line-height: 0.8;") 1%
+                    small.text-center(style="display:block;") Transaction Fee
+                    div
+                    br  
+                    b Unlimited Transactions
+                    br
+                    br
+
+            .row.text-center
+              .column.large-12.margin-vertical
+                ul.list-style-none.margin-none.padding-horizontal
+                  li
+                    h4 Features
+                  li.bold All Starter Plan Features
+                  li Multi-User Login Access
+                  li Priority Support
+                  li Demandware Cartridge
+                  li Quickbooks IIF Download
+                  br
+                  li
+                    h4 Settlement
+                  li Daily Bank Settlements:
+                  small  USA (ACH), Euro (SEPA), 
+                  br 
+                  small Canada (EFT), Mexico (SPEI)
+                  li Bank Transfers:
+                  small United Kingdom, Brazil, South Africa 
+                  br
+                  small Australia, New Zealand 
+                  li Daily Bitcoin Settlements:
+                  small All 240 Supported Countries
+        
+      .text-center
+        .enterprise-card.bg-blue.white.radius.fade-in-right.delay-4.padding
+          .row
+              h4.uppercase.margin-vertical-less Enterprise Plan
+              ul.remove-bullets.margin-bottom-none
+                li Dedicated Account Manager
+                li Bank Transfers available to 240 Countries
+                li MassPay &amp; Payroll Solutions
+                li Engineering &amp; Integration Services
+                li Platform Customization 
+              .margin-top-less.margin-bottom
+                a(href="mailto:sales@bitpay.com").white.btn.btn-blue-border.uppercase.bold.margin-left-less.btn-margin Contact Us
+                br
+                br
+                a(href="/enterprise").white.arrow Learn More
 
   .section
     .row
-      .column
-        h2.text-center.header__bottom-border Frequently Asked Questions
       .column.medium-10.medium-offset-1.large-5.large-offset-1
         .margin-bottom
-          h5 What exchange rate do my customers get?
-          p BitPay always offers the best exchange rate on the market. We pool the order books of all active bitcoin exchanges, and find the best bid worldwide. We call this the <a href="/bitcoin-exchange-rates">Bitcoin Best Bid (BBB) rate</a>, and it is our only rate.
+          h5 Guaranteed Instant Conversion Rate
+          p Buyers will always get a better value by spending their bitcoins at a BitPay merchant than by selling them on an exchange. We pool the order books of active bitcoin exchanges, and find the best bid worldwide. We call this the Bitcoin Best Bid (BBB) rate. BitPay guarantees the bitcoin-to-fiat <a href="https://bitpay.com/bitcoin-exchange-rates">exchange rate</a> at the point of sale, so our merchants are protected from bitcoin price fluctuations.
         div
-          h5 Can I get part of my settlement in bitcoin?
-          p Many of our merchants choose to take a percentage &mdash; or even 100% &mdash; of their BitPay settlement in bitcoin. You can choose your settlement preferences from your account dashboard. We settle bitcoin to your bitcoin address daily.
+          h5 Get Paid In Bitcoin
+          p Many of our merchants choose to take a percentage of their BitPay settlement in bitcoin, or even 100%. You can choose your settlement preferences from your account dashboard. We settle bitcoin to your bitcoin address daily.
+          
       .column.medium-10.medium-offset-1.large-5.large-offset-0.end
         .margin-bottom
-          h5 Do you charge a conversion fee?
-          p All of our monthly plans include free and instant conversion to your settlement currency&mdash; with zero fees.
+          h5 Simple Pricing for all Plans
+          p Our Starter plan offers free, instant conversions for up to 30 transactions a month, weekly settlements in two currencies, and daily settlements  in bitcoin. The Business Plan offers daily settlements in nine currencies and unlimited monthly transactions for a 1% settlement fee.
         div
-          h5 Can you process payments for regulated businesses?
-          p We are able to process payments for most businesses, but legal and regulatory issues prevent us from servicing <a href="/legal#prohibited">some industries</a>. We'd like to provide all legitimate businesses the opportunity to accept bitcoin, and we are constantly working to make that a possibility.
+          h5 Can you process payments for regulated industries?
+          p We are able to process payments for most businesses, but sometimes legal and regulatory concerns prevent us from servicing #[a(href="/about/terms#prohibited") some industries]. We'd like to provide all legal businesses the opportunity to accept bitcoin, and we are constantly working to make that a possibility.
       .column.medium-10.medium-offset-1.large-5.large-offset-1
       .column.medium-10.medium-offset-1.large-5.large-offset-0.end
 
@@ -82,4 +130,4 @@ block content
       .column.large-10.large-offset-1.text-center
           h3.white Get access to the BitPay platform.
           .margin-top-less
-            a(href="/dashboard/signup").white.btn.btn-blue-solid.uppercase.bold.btn-margin Accept Bitcoin
+            a(href="/dashboard/signup").white.btn.btn-blue-solid.uppercase.bold.btn-margin.arrow Accept Bitcoin

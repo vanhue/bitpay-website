@@ -14,15 +14,16 @@ block content
   .bg-gray-gradient.border-vertical-gray.padding-vertical-more
     .row
       .column.large-8
-        h3.header__bottom-border-left Recent Coverage
+        h3.header--bottom-border-left Recent Coverage
         mixin featured-article(title, date, publication, url)
           p.lead.margin-bottom-none
             a(href="#{url}" target="_blank") #{title}
           p.margin-bottom-less #{date} - #{publication}
-        +featured-article("Charities Seek Donations in Bitcoin", "04.12.15", "The Wall Street Journal", "http://www.wsj.com/articles/charities-seek-donations-in-bitcoin-1428894121")
-        +featured-article("BitPay Reveals the (Good) Reason Why Bitcoin Price is Down", "04.17.15", "The Cointelegraph", "http://cointelegraph.com/news/113987/bitpay-reveals-the-good-reason-why-bitcoin-price-is-down")
-        +featured-article("How to Trace a Political Donation Made with Bitcoin", "04.8.15", "Motherboard", "http://motherboard.vice.com/read/how-to-trace-a-political-donation-made-with-bitcoin")
-        +featured-article("This Week On The TechCrunch Bitcoin Podcast: Poker, BitPay And Growth", "03.26.15", "TechCrunch", "http://techcrunch.com/2015/03/26/this-week-on-the-techcrunch-bitcoin-podcast-poker-bitpay-and-growth")
+        +featured-article("Copay the Bitcoin Way", "06.5.15", "PYMNTS", "http://www.pymnts.com/in-depth/2015/copay-the-bitcoin-way/#.VcuQGHiNdnE")
+        +featured-article("LOT Polish Airlines Now Accepting Bitcoin", "08.5.15", "TechCrunch", "http://techcrunch.com/2015/08/05/lot-polish-airlines-now-accepting-bitcoin/")
+        +featured-article("18 Months after Adopting Bitcoin, TigerDirect Reports Fantastic Experience and Continued Growth", "08.7.15", "Bitcoin Magazine", "https://bitcoinmagazine.com/21516/18-months-adopting-bitcoin-tigerdirect-reports-fantastic-experience-continued-growth/")
+        +featured-article("BitPay Brings Bitcoin to Payments Companies on Three Continents", "08.7.15", "Payment Week", "https://paymentweek.com/2015-8-7-bitpay-brings-bitcoin-to-payments-companies-on-three-continents-7968/")
+        +featured-article("Louis CK Becomes First Comedian to Accept Bitcoin", "08.10.15", "International Business Times", "http://www.ibtimes.co.uk/louis-ck-becomes-first-comedian-accept-bitcoin-1514822")
       .column.large-4.margin-top-less
         mixin press-social(title, url, icon)
           li.margin-bottom-less
@@ -46,27 +47,28 @@ block content
   .section
     .row.margin-bottom
       .column.large-6
-        h3.header__bottom-border-left Brand Guidelines
+        h3.header--bottom-border-left Logo
         .row
           .column.medium-6
             .bg-blue.radius.text-center.padding-vertical-less
-              img(src="/images/bitpay-logo-primary.png", alt="BitPay Primary Logo" style="width: 80%;")
+              img(src="/images/bitpay-logo-primary.png" alt="BitPay Primary Logo" style="width: 80%;")
             ul.inline-list
               li <a href="/images/bitpay-logo-primary.png" download>PNG</a>
               li <a href="/images/bitpay-logo-primary.eps" download>EPS</a>
           .column.medium-6
             .bg-white.radius.text-center.padding-vertical-less.border-gray
-              img(src="/images/bitpay-logo-inverse.png", alt="BitPay Secondary Logo" style="width: 80%;")
+              img(src="/images/bitpay-logo-inverse.png" alt="BitPay Secondary Logo" style="width: 80%;")
             ul.inline-list
               li <a href="/images/bitpay-logo-inverse.png" download>PNG</a>
               li <a href="/images/bitpay-logo-inverse.eps" download>EPS</a>
 
         hr
-        p.lead Our logo is a word mark derived from the Ubuntu font&mdash; the the first typeface associated with bitcoin.
-        p We prefer you use the white logo on a blue (or dark) background whenever possible, followed by the blue logo on a white (or light) background. Please be sure to include adequate spacing around the logo and resist the temptation to embellish the logo with any additional effects, treatments, or colors.
+        p.lead Our logo is a wordmark derived from the Ubuntu font &mdash; the first typeface associated with bitcoin.
+        p We prefer you use the white logo on a blue (or dark) background whenever possible, followed by the blue logo on a white (or light) background.
+        p Please be sure to include adequate spacing around the logo and resist the temptation to embellish the logo with any additional effects, treatments, or colors.
         
       .column.large-6
-        h3.header__bottom-border-left Capitalization
+        h3.header--bottom-border-left Capitalization
         .row
           .column.medium-4
             p.uppercase.bold Correct
@@ -74,7 +76,7 @@ block content
             p.checkmark BitPay
         .row
           .column.medium-4
-            p.uppercase.bold Incorrect
+            p.uppercase.bold Please avoid
           .column.medium-8
             .row
               .column.xlarge-6
@@ -99,4 +101,3 @@ block content
       .column.medium-8.medium-offset-2.text-center
         a(href="/bitpay-press-kit05072015.zip" download).white.btn.btn-margin.btn-blue-solid.uppercase.bold Download Press Kit
         a(href="mailto:media@bitpay.com").white.btn.btn-blue-border.btn-margin.uppercase.bold Email Us
-        h6.text-center.white.uppercase.margin-top-less.margin-bottom-none Media Requests: +1 (415) 570-7450

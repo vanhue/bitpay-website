@@ -1,0 +1,31 @@
+extends primary
+
+block header
+  include ../_includes/docs-header
+
+append vars
+  -var bodyClass = 'white-header';
+  
+block content
+  .section    
+    .row
+      .integration-guide-body.column.large-8.small-12
+        block integration-guide        
+      .column.large-4.small-12
+        .h5.uppercase Integration Guides
+        include ../_includes/integration-dropdown
+        img(src="#{imageURL}", alt="#{title}" style="max-width:80%").padding-vertical-less
+        .h6 Category
+        p #{category}
+        .h6 Website
+        a(href="#{website}") Visit Website
+        a(href="#{downloadURL}").white.btn.btn-blue-solid.uppercase.bold.btn-margin.block.text-center.margin-top #{cta}
+        
+  .section.bg-lightblue-gradient.border-top-gray
+    .row
+      .column.medium-8.medium-offset-2
+        h2.text-center.white Get Started with the #{title} integration
+    .row
+      .column.medium-8.medium-offset-2.text-center
+        a(href="/dashboard/signup").white.btn.btn-blue-solid.uppercase.bold.btn-margin Sign Up
+        a(href="http://www.magentocommerce.com/magento-connect/bitpay-bitcoin-payment-method.html").white.btn.btn-blue-border.uppercase.bold.arrow.btn-margin #{cta}

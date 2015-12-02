@@ -6,12 +6,15 @@ $blue-darker: #0E1C40;
 $blue-dark: #18347B;
 $blue-medium: #3354A8;
 $blue-light: #4683E8;
+$blue-pale: #6389ED;
 $gray-darkest: #343849;
 $gray-darker: #565966;
 $gray-dark: #7A7D8C;
 $gray-medium: #929396;
 $gray-light: #DEDFE1;
 $gray-xlight: #FAFAFD;
+$bitpay-blue: #1A3A8B;
+$orange: #F5A623;
 
 //override foundation variables
 $primary-color: $blue-light;
@@ -38,7 +41,7 @@ $menu-slide: "transform 200ms ease-in-out";
 
 // typography
 
-$body-font-color: $gray-dark;
+$body-font-color: $gray-darker;
 $font-family-sans-serif: 'Karla', "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 $font-family-monospace: Menlo, Consolas, "Liberation Mono", Courier, monospace;
 $header-font-family: $font-family-sans-serif;

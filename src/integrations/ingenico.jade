@@ -1,0 +1,21 @@
+append vars
+  -var pageSelected = 'Docs'
+
+block pagevars
+  -var title = "Ingenico Terminal App";
+  -var description = "Accept bitcoin on your Telium-based Ingenico terminal with BitPay's point of sale app.";
+  -var category = "Point of Sale Integration";
+  -var website = "http://www.ingenico.com/";
+  -var imageURL = "/images/integrations/ingenico-wide.png"
+  -var downloadURL = "mailto:sales@bitpay.com"
+  -var cta = "Contact Sales"
+  
+
+
+extends ../_layouts/integration-docs
+
+append integration-guide
+  h1 #{title} Plugin
+    p.lead #{description}
+    
+  include:marked ingenico.md

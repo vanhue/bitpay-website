@@ -1,0 +1,77 @@
+extends ../_layouts/docs
+
+block title
+  title Invoice Callbacks | BitPay Documentation
+
+append vars
+  -var pageSelected = 'Docs'
+  -var subpageSelected = 'Invoice Callbacks'
+
+block information
+  h2.header--bottom-border-left Invoice Callbacks
+  p.lead An IPN (Instant Payment Notification) is an HTTP POST message sent from the BitPay server to the merchant’s eCommerce server. 
+  
+  pre.margin-bottom
+    | {
+    |   "id": "123BitPayInvoiceID",
+    |   "url": "https://bitpay.com/invoice?id=123BitPayInvoiceID",
+    |   "posData": "{\"paymentID\":\"123PAYMENTID\",\"orderID\":\"123ORDERID\"}",
+    |   "status": "paid",
+    |   "btcPrice": "0.0512",
+    |   "price": 29.14,
+    |   "currency": "USD",
+    |   "invoiceTime": 1407881291063,
+    |   "expirationTime": 1407882191063,
+    |   "currentTime": 1407882058099,
+    |   "btcPaid": "0.0512",
+    |   "rate": 568.69,
+    |   "exceptionStatus": false,
+    |   "bitpay":
+    |     {
+    |       "id": "123BitPayInvoiceID",
+    |       "url": "https://bitpay.com/invoice?id=123BitPayInvoiceID",
+    |       "posData": "{\"paymentID\":\"123PAYMENTID\",\"orderID\":\"123ORDERID\"}",
+    |       "status": "confirmed",
+    |       "btcPrice": "0.0512",
+    |       "price": 29.14,
+    |       "currency": "USD",
+    |       "invoiceTime": 1407881291063,
+    |       "expirationTime": 1407882191063,
+    |       "currentTime": 1407882058099,
+    |       "btcPaid": "0.0512",
+    |       "rate": 568.69,
+    |       "exceptionStatus": false
+    |     }
+    | }
+  
+  p The primary purpose of an IPN is to alert the merchant’s ecommerce server that a BitPay invoice status has changed. The BitPay server sends IPNs for each invoice according to the transaction speed setting within the invoice.
+  
+  p The BitPay server attempts to send IPNs multiple times until the send is either successful or the BitPay server gives up. The BitPay server attempts retries on the following schedule.
+
+  ul 
+    li 0:00 - 1 minute delay
+    li 1:00 - 4 minute delay
+    li 5:00 - 9 minute delay
+    li 14:00 - 16 minute delay
+    li 30:00 - 25 minute delay
+    li 55:00 - failed
+  
+  p The BitPay server considers a status code #[code 200] response to be a successful send. The BitPay server does not follow redirects.
+
+  p The invoice status that is sent with the IPN is the status at the time of IPN delivery (not the status at the time IPN was first attempted). IPNs need to be handled idiomatically (as they can be resent) and you should not assume you will receive an IPN for every invoice status.
+  
+  p We would advise you to open a non-standard port and specify that port within the notificationURL instead of white listing BitPay IP addresses as they are subject to change without notice. Since we are not yet signing these notifications they should not be trusted outright. We recommend verifying these notifications against our API when they are received to make sure the data presented is authentic. For example when an invoice paid notification comes in, you should make a request to our API to check the status of that invoice to make sure it was actually paid. This provides additional security in verifying paid orders.
+
+  h3 IPN Troubleshooting
+  
+  p In the event that IPNs are not being received or processed as expected, please check the following:
+
+  ul
+    li Verify that your notificationURL for the invoice is #[code https:] (not #[code http:])
+    li Verify that your callback handler at the #[code notificationURL] is properly receiving POSTs. You can verify this by POSTing your own messages to the server from a tool like Chrome Postman.
+    li Verify that the POST data received is properly parsed and that the logic toward updating order status on your server is as expected.
+    li Verify that your server is not blocking POSTs from servers it may not recognize (e.g. the BitPay origin server is properly whitelisted).
+    
+  p IPNs can be resent by #[a(href="/api#resource-Invoices") sending a POST] to #[code /invoices/:invoiceId/notifications] accompanied by the token associated with the specified invoice.
+  
+  a(href="/docs/invoice-states").btn.btn-blue-border.uppercase.bold.arrow-blue.margin-top Invoice States

@@ -1,0 +1,120 @@
+extends ../_layouts/primary
+
+block title
+  title Brand Guide | BitPay
+
+block content
+  .row.margin-bottom-less
+    .column.medium-3
+      h1.small-only-text-center Brand Guide
+    .column.medium-9.text-center
+      a(href="/bitpay-press-kit05072015.zip" download).white.btn.btn-blue-solid.uppercase.bold.large-float-right Download Press Kit
+      
+      
+  .border-vertical-gray.brand-guide.bg-gray-halfpage-gradient
+      
+    .row
+      .large-2.columns.padding-vertical-more
+        .sidebar
+          ul.side-nav.bg-gray(role="navigation" data-magellan-expedition="fixed" data-options="offset_by_height: false;")
+            li
+              a(href="#top" data-magellan-arrival="top") Logo
+            li
+              a(href="#logo-variations" data-magellan-arrival="logo-variations") Logo Variations 
+            li
+              a(href="#colors" data-magellan-arrival="colors") Colors
+            li
+              a(href="#capitalization" data-magellan-arrival="capitalization") Capitalization
+      
+      .large-10.columns.bg-white.padding-vertical-more.brand-content
+        .row.margin-bottom
+          .column.large-12
+            h3.header--bottom-border-left(data-magellan-destination="top" id="top") BitPay Logo
+            .row
+              .column.medium-12
+                .image.bg-blue.radius.text-center.padding-vertical-less
+                  a(href="/images/bitpay-logo-inverse.png" download="filename")
+                    img(src="/images/bitpay-logo-primary.png" alt="BitPay Primary Logo" style="width: 80%;")
+                  .download(style="background-image: url('/images/icons/download.svg');")
+                br 
+                p.lead Our logo is a word mark derived from the Ubuntu font &mdash; the first typeface associated with bitcoin.
+                p We prefer you use the white logo on a blue (or dark) background whenever possible, followed by the blue logo on a white (or light) background. Please be sure to include adequate spacing around the logo and resist the temptation to embellish the logo with any additional effects, treatments, or colors.
+            hr
+          .column.large-12(data-magellan-destination="logo-variations" id="logo-variations") 
+            h3.header--bottom-border-left Logo Variations
+            .row.columns
+              .column.large-4.padding-left-none
+                .image.radius.text-center.padding-vertical-less.border-gray.bg-blue
+                  a(href="/images/bitpay-logo-primary.png" download="bitpay-logo-primary")
+                    img(src="/images/bitpay-logo-primary.png" alt="BitPay Secondary Logo" style="width: 80%;")
+                    .download(style="background-image: url('/images/icons/download.svg');")
+                h5 Blue/Dark
+                p Is our primary logo and used most often on a blue background.
+                
+              .column.large-4.padding-left-none
+                .image.radius.text-center.padding-vertical-less.border-gray
+                  a(href="/images/bitpay-logo-inverse.png" download="bitpay-logo-inverse")
+                    img(src="/images/bitpay-logo-inverse.png" alt="BitPay Secondary Logo" style="width: 80%;")
+                    .download(style="background-image: url('/images/icons/download.svg');")
+                h5 Blue/Dark
+                p Is our primary color and used most often
+              .column.large-4.padding-left-none
+                .image.bg-white.radius.text-center.padding-vertical-less.border-gray
+                  a(href="https://github.com/bitpay/bitpay-brand/blob/master/bitpay-logo-grayscale.png?raw=true" download="bitpay-logo-grayscale")
+                    img(src="https://github.com/bitpay/bitpay-brand/blob/master/bitpay-logo-grayscale.png?raw=true" alt="BitPay Secondary Logo" style="width: 80%;")
+                    .download(style="background-image: url('/images/icons/download.svg');")
+                h5 Blue/Dark
+                p Is our primary color and used most often
+              
+            .row
+            hr 
+          .column.large-12(data-magellan-destination="colors" id="colors")
+            h3.header--bottom-border-left BitPay Colors
+            .row
+              .column.color-profile.large-6(style="background-color:#1A3A8B;")
+                h5 BitPay Blue
+                
+                  ul
+                    li #1A3A8B
+                    li RGB: 26,58,139
+                    li CMYK: 100,91,13,2
+                    
+              .column.color-profile.left(style="background-color:#FBB541;")
+                h5 Bicoin Gold
+              
+                  ul
+                    li #FBB541
+                    li RGB: 250,181,65
+                    li CMYK: 1,32,85,0
+            hr
+                  
+          .column.large-8.left(data-magellan-destination="capitalization" id="capitalization")
+            h3.header--bottom-border-left Capitalization
+            .table.large-12.radius.capitalization
+              .row
+                .column.large-4.medium-12
+                  p.uppercase.bold Correct
+                
+                  p.checkmark BitPay
+                .column.large-8.medium-12.border-left-gray
+                  p.uppercase.bold Please Avoid
+                  .small-12
+                    p.incorrect.margin-bottom-less(style="width:50%;float:left") Bitpay
+                    p.incorrect.margin-bottom-less(style="width:50%;float:left") bitPay
+                    p.incorrect.margin-bottom-less(style="width:50%;float:left") bit-pay
+                    p.incorrect.margin-bottom-less(style="width:50%;float:left") bit pay
+            .row
+              .column
+                br
+                p.lead BitPay is written with the “B” and “P” capitalized to distinguish BitPay (our company) from bitcoin (the currency).
+    .medium-white-fade-top
+    .section.bg-lightblue-gradient.border-top-gray.clear.cta
+      .row
+        .column.medium-8.medium-offset-2
+          h2.text-center.white Need more? We're happy to help.
+        
+      .row
+        .column.medium-8.medium-offset-2.text-center
+          a(href="/bitpay-press-kit05072015.zip" download).white.btn.btn-margin.btn-blue-solid.uppercase.bold Download Press Kit
+          a(href="mailto:media@bitpay.com").white.btn.btn-blue-border.btn-margin.uppercase.bold Email Us
+          h6.text-center.white.uppercase.margin-top-less.margin-bottom-none Media Requests: +1 (415) 570-7450

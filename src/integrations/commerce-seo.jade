@@ -1,0 +1,21 @@
+append vars
+  -var pageSelected = 'Docs'
+
+block pagevars
+  -var title = "Commerce-SEO";
+  -var description = "Accept bitcoin on your commerce:SEO site with a BitPay's open source plugin.";
+  -var category = "E-commerce Plugin";
+  -var website = "https://www.commerce-seo.de/";
+  -var imageURL = "/images/integrations/commerceseo.png"
+  -var downloadURL = "https://github.com/bitpay/commerce-seo-plugin"
+  -var cta = "Download Plugin"
+
+
+
+extends ../_layouts/integration-docs
+
+append integration-guide
+  h1 #{title} Plugin
+    p.lead #{description}
+    
+  include:marked commerce-seo.md

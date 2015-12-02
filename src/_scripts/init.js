@@ -34,4 +34,11 @@
     });
   }
 
+  var integrationSelector = jQuery("#integrationDrop");
+  if (integrationSelector.length) {
+    integrationSelector.on("change", function() {
+      window.location.href = this.value;
+    });
+  }
+
 }());

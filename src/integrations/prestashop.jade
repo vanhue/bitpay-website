@@ -1,0 +1,19 @@
+append vars
+  -var pageSelected = 'Docs'
+
+block pagevars
+  -var title = "PrestaShop Plugin";
+  -var description = "Accept bitcoin on your PrestaShop site with BitPay's open source plugin.";
+  -var category = "E-commerce Plugin";
+  -var website = "https://www.prestashop.com/";
+  -var imageURL = "/images/integrations/prestashop.png"
+  -var downloadURL = "https://github.com/bitpay/prestashop-plugin/releases"
+  -var cta = "Download Plugin"
+
+extends ../_layouts/integration-docs
+
+append integration-guide
+  h1 #{title} Plugin
+    p.lead #{description}
+    
+  include:marked prestashop.md

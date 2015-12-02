@@ -1,0 +1,19 @@
+append vars
+  -var pageSelected = 'Docs'
+
+block pagevars
+  -var title = "Shopify Integration";
+  -var description = "Accept bitcoin on your Shopify store with BitPay's one-click integration.";
+  -var category = "E-commerce Integration";
+  -var website = "https://www.shopify.com/";
+  -var imageURL = "/images/integrations/shopify.png"
+  -var downloadURL = "https://www.shopify.com/"
+  -var cta = "Visit Website"
+
+extends ../_layouts/integration-docs
+
+append integration-guide
+  h1 #{title} Plugin
+    p.lead #{description}
+    
+  include:marked shopify.md

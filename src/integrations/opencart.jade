@@ -1,0 +1,19 @@
+append vars
+  -var pageSelected = 'Docs'
+
+block pagevars
+  -var title = "OpenCart Plugin";
+  -var description = "Accept bitcoin on your OpenCart site with BitPay's open source plugin.";
+  -var category = "E-commerce Integration";
+  -var website = "http://www.opencart.com/index.php?route=download/download";
+  -var imageURL = "/images/integrations/opencart.png"
+  -var downloadURL = "https://github.com/bitpay/opencart-plugin/releases/tag/v2.0.0"
+  -var cta = "Download Plugin"
+
+extends ../_layouts/integration-docs
+
+append integration-guide
+  h1 #{title} Plugin
+    p.lead #{description}
+    
+  include:marked opencart.md

@@ -35,7 +35,7 @@ block content
 
   .section.border-bottom-gray
     .row
-      h2.text-center.header__bottom-border#platform Platform
+      h2.text-center.header--bottom-border#platform Platform
     mixin feature(heading, description)
       .column.large-4
         h4 #{heading} 
@@ -53,7 +53,7 @@ block content
         a(href="/integrations").arrow-blue See our full list of libraries and SDKs
 
     .row.margin-bottom-more
-      +feature("National Currency Settlement", "Receive 100% of the value of every transaction in any of eight national currencies or bitcoin, or opt for a mix.") 
+      +feature("National Currency Settlement", "Receive payouts for every transaction in any of eight national currencies or bitcoin, or opt for a mix.") 
       +feature("Invoicing in 40 Languages", "Accommodate global customers with invoices in all major languages.") 
       +feature("Pricing in 150 Currencies", "Calculate prices displayed on BitPay invoices in any of 150 currencies.")
       
@@ -66,10 +66,14 @@ block content
       +feature("Payment Protocol Implementation", "Our invoices support payment protocol (BIP 70 and BIP 73), which adds the security of direct payment communication and the convenience of clear payment address identification.")
       +feature("Email, Mobile, and Server Payment Notifications", "Stay up-to-date with your transactions via email, text, and server IPNs.")
       +feature("Ledger Payment Tracking", "Track and export transaction data for all bitcoin payments received.") 
+      
+    .row.margin-bottom-more
+      +feature("Direct Bitcoin Refunds", "Manage under and overpaid invoices and issue bitcoin refunds directly to any bitcoin wallet through your BitPay merchant dashboard.")
+      +feature("Multi-User Support", "Securely share role-based access to your BitPay account with multiple users.")
         
   .section.border-bottom-gray
     .row.margin-bottom-more
-      h2.text-center.header__bottom-border#ecommerce E-Commerce
+      h2.text-center.header--bottom-border#ecommerce E-Commerce
     
     .row.margin-bottom-more
       +feature("Payment Buttons and Hosted Checkout", "Add a bitcoin payment option to your website - just copy and paste a few lines of script.") 
@@ -82,10 +86,10 @@ block content
         
   .section.border-bottom-gray
     .row.margin-bottom-more
-      h2.text-center.header__bottom-border#billing Billing
+      h2.text-center.header--bottom-border#billing Billing
     
     .row.margin-bottom-more
-      +feature("Email Invoicing", "Bill clients electronically and receive rapid payment. No paper required, no fees or wait times.")
+      +feature("Email Invoicing", "Bill clients electronically and receive rapid payment. No wait times, no paper required.")
       +feature("Scheduled Billing", "Invoice on a one-time, weekly, monthly, quarterly, or yearly basis.")
       +feature("Integrated Solutions", "Expand your bitcoin billing options using our integrations with leading billing service providers.") 
         
@@ -94,7 +98,7 @@ block content
         
   .section.border-bottom-gray
     .row.margin-bottom-more
-      h2.text-center.header__bottom-border#retail Retail
+      h2.text-center.header--bottom-border#retail Retail
     
     .row.margin-bottom-more
       +feature("Mobile Point of Sale App", "Accept bitcoin on phones or tablets with Bitcoin Checkout for iOS and Android.")
@@ -107,7 +111,7 @@ block content
 
   .section.border-bottom-gray
       .row.margin-bottom-more
-        h2.text-center.header__bottom-border#donations Donations
+        h2.text-center.header--bottom-border#donations Donations
       
       .row.margin-bottom-more
         +feature("Web-Based Donation Buttons", "Receive bitcoin contributions with a direct, easily-implemented donation button.")
@@ -120,15 +124,14 @@ block content
 
   .section.border-bottom-gray
     .row.margin-bottom-more
-      h2.text-center.header__bottom-border#support Support
+      h2.text-center.header--bottom-border#support Support
     
     .row.margin-bottom-more
       +feature("Email and Phone Availability", "All merchants have access to our industry-leading support team via email. Phone support is available on our")
-      +feature("Free Refunding", "Our team will issue bitcoin refunds on your behalf, free of charge.")
       +feature("FAQs and Support Guides", "Access our knowledge on the most popular merchant questions and integration mistakes.")
-        
-    .row.margin-bottom-more
       +feature("Dedicated Account Management", "Keep things running smoothly with a team member dedicated to supporting your daily account operations.")
+
+    .row.margin-bottom-more
       +feature("Forums for Product Feedback", "Propose improvements, give product feedback, and ask questions about our platform on our BitPay Labs forum.") 
         
 

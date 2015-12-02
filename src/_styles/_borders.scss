@@ -18,8 +18,8 @@
 }
 
 // for the bottom centered border
-.header__bottom-border,
-.header__bottom-border-left {
+.header--bottom-border,
+.header--bottom-border-left {
   position: relative;
   margin-bottom: 3rem;
   &:after {
@@ -36,15 +36,17 @@
     }
   }
 }
-
-.header__bottom-border:after {
+.border-left{
+  border-left:1px solid $gray-light;
+}
+.header--bottom-border:after {
   left: calc(50% - 2rem);
 }
 
-.header__bottom-border-left:after {
+.header--bottom-border-left:after {
   left: 0;
 }
-.body-text__bottom-border {
+.body-text--bottom-border {
   position: relative;
   padding-bottom: 10px;
     &:after {
