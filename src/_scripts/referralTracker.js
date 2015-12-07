@@ -19,13 +19,16 @@
         },
         onready: function () {
           referralScope.flashReady = true;
-          if (referralScope.ids.urlAid) {
+
+          referralScope.ids.flashAid = referralScope.swfStore.get('affiliateId');
+          if(referralScope.ids.flashAid) {
+            setJsCookie(referralScope.ids.flashAid);
+          } else if (referralScope.ids.cookieAid) {
+            setFlashCookie(referralScope.ids.cookieAid);
+          } else if (referralScope.ids.urlAid) {
             setFlashCookie(referralScope.ids.urlAid);
           }
-          else if (referralScope.ids.cookieAid) {
-            setFlashCookie(referralScope.ids.cookieAid);
-          }
-          referralScope.ids.flashAid = referralScope.swfStore.get('affiliateId');
+
         }
       });
     }
@@ -47,13 +50,13 @@
   initializeReferralData();
 
   function setFlashCookie(id) {
-    if (referralScope.flashReady && !referralScope.swfStore.get('affiliateId')) {
+    if (id && id.length> 0 && referralScope.flashReady && !referralScope.swfStore.get('affiliateId')) {
       referralScope.swfStore.set('affiliateId', id);
     }
   }
 
   function setJsCookie(id) {
-    if (!readJSCookie('bp-referral-code')) {
+    if (id && id.length> 0 && !readJSCookie('bp-referral-code')) {
       referralScope.ids.cookieAid = id;
       createCookie('bp-referral-code', id, 9999);
     }
@@ -94,6 +97,8 @@
   }
 
   var oid = getUrlParameter('oid');
-  referralScope.setUrlAid(oid);
+  if(oid && oid.length > 0){
+    referralScope.setUrlAid(oid);
+  }
 
 }());
