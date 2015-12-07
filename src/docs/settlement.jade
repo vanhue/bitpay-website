@@ -16,60 +16,63 @@ block information
   p We protect merchants on our platform by maintaining enterprise-level legal and compliance standards. Tiered processing limits apply based on verification level; these limits can be raised through #[a(href="https://bitpay.com/dashboard/verification") compliance verification].
 
   h3 Currencies &amp; Settlement Details
-  p.lead.large-margin-bottom-none BitPay supports settlement in 9 currencies and direct bank deposit in 38 countries.
-  p.margin-bottom Please pick your location to see minimum settlement amounts and deposit timings.
+  p BitPay supports settlement in 9 currencies and direct bank deposit in 38 countries. Bitcoin settlements are supported in 240 countries. Please pick your location to see minimum settlement amounts and deposit timings.
   
   .row
     .column
       .margin-bottom.padding-horizontal.padding-vertical-less.radius.border-gray        
         .row
           .column.xlarge-4
-            select.margin-top-less
-              option United States
-              option Canada
-              option Great Britain
+            select#settlementDrop.margin-top-less
+              option(value="aud") Australia
+              option(value="cad") Canada
+              option(value="gbp") Great Britain
+              option(value="mxn") Mexico
+              option(value="nzd") New Zealand
+              option(value="usd" selected) United States
               option(disabled) ---
-              option Australia
-              option Austria
-              option Belgium
-              option Bulgaria
-              option Croatia
-              option Cyprus
-              option Czech Republic
-              option Denmark
-              option Estonia
-              option Finland
-              option France
-              option Germany
-              option Greece
-              option Hungary
-              option Ireland
-              option Italy
-              option Latvia
-              option Liechtenstein
-              option Lithuania
-              option Luxembourg
-              option Mexico
-              option Malta
-              option Monaco
-              option Netherlands
-              option New Zealand
-              option Norway
-              option Poland
-              option Portugal
-              option Romania
-              option Slovakia
-              option Slovenia
-              option South Africa
-              option Spain
-              option Sweden
-              option Switzerland
-        mixin currency-detail(name, flag, timing, minimum)
+              option(value="eur") Austria
+              option(value="eur") Belgium
+              option(value="eur") Bulgaria
+              option(value="eur") Croatia
+              option(value="eur") Cyprus
+              option(value="eur") Czech Republic
+              option(value="eur") Denmark
+              option(value="eur") Estonia
+              option(value="eur") Finland
+              option(value="eur") France
+              option(value="eur") Germany
+              option(value="eur") Greece
+              option(value="eur") Hungary
+              option(value="eur") Ireland
+              option(value="eur") Italy
+              option(value="eur") Latvia
+              option(value="eur") Liechtenstein
+              option(value="eur") Lithuania
+              option(value="eur") Luxembourg
+              option(value="eur") Malta
+              option(value="eur") Monaco
+              option(value="eur") Netherlands
+              option(value="eur") Norway
+              option(value="eur") Poland
+              option(value="eur") Portugal
+              option(value="eur") Romania
+              option(value="eur") Slovakia
+              option(value="eur") Slovenia
+              option(value="eur") South Africa
+              option(value="eur") Spain
+              option(value="eur") Sweden
+              option(value="eur") Switzerland
+        mixin currency-name(name, flag)
           .row
             .column
-              .h3(style="line-height: 1.15;") #{name}        
-                span.small-icon.background-contain.h5(style="background-image: url('/images/flags/#{flag}.png'); vertical-align: middle; position: relative; margin-left: 0.5rem; top: 0px;")
+              .h3(style="line-height: 1.15;") #{name}
+                if flag
+                  span.small-icon.background-contain.h5(style="background-image: url('/images/flags/#{flag}.png'); vertical-align: middle; position: relative; margin-left: 0.5rem; top: 0px;")
+                else
+                  span.small-icon.background-contain.h5(style="vertical-align: middle; position: relative; margin-left: 0.5rem; top: 0px;")
           hr.margin-bottom.margin-top-less.xlarge-margin-top-none(style="margin-left: -2rem; margin-right: -2rem;")
+        mixin currency-details(timing, minimum)
           .row
             .column.large-5.xlarge-4
               h5(style="line-height:1;") Settlement Timing
@@ -80,9 +83,28 @@ block information
               h5(style="line-height:1;") Minimum Settlement
             .column.large-7.xlarge-8
               p #{minimum}
-        +currency-detail("United States Dollars","usd","Settlement in USD is available via ACH to banks in the USA, and will appear in your bank account after 2 business days", "The minimum settlement is 20 USD.")
-        // +currency-detail("Canadian Dollars","cad","Settlement will appear in your bank account after two business days.", "The minimum settlement is 100 CAD.")
-        // +currency-detail("Pound Sterling","gbp","Settlement will appear in your bank account after two business days.", "The minimum settlement is 100 GBP.")
+        
+        #usd.settlementDetails
+          +currency-name('US Dollars (USD)', 'usd')
+          +currency-details('Settlement in USD is available via ACH to banks in the USA, and will appear in your bank account after 2 business days.', 'The minimum settlement is 20 USD.')
+        #cad.settlementDetails(style="display:none")
+          +currency-name('Canadian Dollars (CAD)', 'cad')
+          +currency-details('Settlement will appear in your bank account after two business days.', 'The minimum settlement is 100 CAD.')
+        #aud.settlementDetails(style="display:none")
+          +currency-name('Australian Dollars (AUD)', 'aud')
+          +currency-details('Settlement will appear in your bank account after two business days.', 'The minimum settlement is 1,000 AUD.')
+        #gbp.settlementDetails(style="display:none")
+          +currency-name('Pounds Sterling (GBP)', 'gbp')
+          +currency-details('Settlement will appear in your bank account after two business days.', 'The minimum settlement is 100 GBP.')
+        #mxn.settlementDetails(style="display:none")
+          +currency-name('Mexican Pesos (MXN)', false)
+          +currency-details('Settlement will appear in your bank account after two business days.', 'The minimum settlement is 1,500 MXN.')
+        #nzd.settlementDetails(style="display:none")
+          +currency-name('New Zealand Dollar (NZD)', 'nzd')
+          +currency-details('Settlement will appear in your bank account after two business days.', 'The minimum settlement is 20 EUR.')
+        #eur.settlementDetails(style="display:none")
+          +currency-name('Eurozone Euros (EUR)', 'eur')
+          +currency-details('Once a settlement payment has been issued, funds will appear in your bank account after one business day.', 'The minimum settlement is 1,000 NZD.')
   
   ul.no-bullet.accordion(data-accordion="settlement")
     li.accordion-navigation
@@ -159,9 +181,8 @@ block information
   hr
   .row
     .column.xlarge-6
-      h3 Bitcoin Split
-      p Many merchants choose to take a percentage of their settlement in bitcoin. This can be done by taking a Bitcoin Split. You can choose to take any percentage&mdash; or all of it&mdash; in bitcoin.
-      p You can set up a bitcoin split in your #[a(href="https://bitpay.com/dashboard/settings/settlement") Settlement Settings]. Settlement is paid daily to your bitcoin address on file.
+      h3 Bitcoin Settlements
+      p Bitcoin settlements are supported in 240 countries, and you can choose to take any percentage of your settlement in bitcoin. Settlement is paid daily to your bitcoin address on file. The minimum settlement is 0.01 BTC.
 
     .column.xlarge-6
       h3 Exchange Rates
