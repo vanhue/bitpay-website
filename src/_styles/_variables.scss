@@ -38,6 +38,7 @@ $side-nav-link-padding: rem-calc(2 10);
 $off-canvas-bg: #172852;
 $menu-slide: "transform 200ms ease-in-out";
 
+
 // typography
 
 $body-font-color: $gray-darker;
@@ -53,6 +54,8 @@ $subheader-bottom-margin: 1rem;
 
 $side-nav-divider-color: transparent;
 
+// accordion
+$accordion-content-padding: 1rem 0 0;
 $accordion-navigation-bg-color: #fff;
 $accordion-navigation-hover-bg-color: #fff;
 $accordion-navigation-active-bg-color: #fff;

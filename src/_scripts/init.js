@@ -34,10 +34,18 @@
     });
   }
 
-  var integrationSelector = jQuery("#integrationDrop");
+  var integrationSelector = jQuery('#integrationDrop');
   if (integrationSelector.length) {
-    integrationSelector.on("change", function() {
+    integrationSelector.on('change', function() {
       window.location.href = this.value;
+    });
+  }
+
+  var settlementSelector = jQuery('#settlementDrop');
+  if (settlementSelector.length) {
+    settlementSelector.on('change', function() {
+      jQuery('.settlementDetails').hide();
+      jQuery('#' + this.value).show();
     });
   }
 

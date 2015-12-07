@@ -164,14 +164,6 @@
   }
 }
 
-.grow {
-  transition: all 0.4s;
-  &.larger-text {
-    font-size: 160%;
-    line-height: 1.2;
-  }
-}
-
 .quote-anim {
   animation: pop 0.5s;
   &:before {
