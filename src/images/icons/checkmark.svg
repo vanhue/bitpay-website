@@ -1,10 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
-    <title>Checkmark</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <path d="M9.99999999,0 C4.47596155,0 0,4.47596154 0,10 C0,15.5240385 4.47596155,20 9.99999999,20 C15.5240385,20 20,15.5240385 20,10 C20,4.47596154 15.5240385,0 9.99999999,0 L9.99999999,0 L9.99999999,0 Z M8.45673078,13.5432692 C8.34134616,13.6586538 8.17788461,13.7548077 8.03365384,13.7548077 C7.88942307,13.7548077 7.72596155,13.6538462 7.60576922,13.5384615 L4.91346155,10.8461538 L5.76923078,9.9903846 L8.03846155,12.2596154 L14.0384615,6.21634615 L14.8798077,7.08653846 L8.45673078,13.5432692 L8.45673078,13.5432692 Z" id="Shape" fill="#3BE06B" sketch:type="MSShapeGroup"></path>
-    </g>
-</svg>
+<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Checkmark</title><path d="M10 0C4.476 0 0 4.476 0 10s4.476 10 10 10 10-4.476 10-10S15.524 0 10 0zM8.457 13.543c-.116.116-.28.212-.423.212-.145 0-.308-.1-.428-.217l-2.693-2.692.856-.856 2.268 2.27 6-6.044.842.87-6.423 6.457z" fill="#3BE06B" fill-rule="evenodd"/></svg>
