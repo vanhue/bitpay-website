@@ -2,33 +2,38 @@
 
 .blue {
 
-  &-light{
+  &-light {
     $hue: $blue-light;
     color: $hue;
-    &-bg{
+
+    &-bg {
       background: $hue;
     }
   }
 
-  &-pale{
+  &-pale {
     $hue: $blue-pale;
     color: $hue;
-    &-bg{
+
+    &-bg {
       background: $hue;
     }
   }
 
-  &-medium{
+  &-medium {
     $hue: $blue-medium;
     color: $hue;
-    &-bg{
+
+    &-bg {
       background: $hue;
     }
   }
-  &-dark{
+
+  &-dark {
     $hue: $blue-dark;
     color: $hue;
-    &-bg{
+
+    &-bg {
       background: $hue;
     }
   }
@@ -36,16 +41,19 @@
 }
 
 
-.orange{
-  $hue:$orange;
+.orange {
+  $hue: $orange;
   color: $hue;
-  &-bg{
+
+  &-bg {
     background: $hue;
   }
-  &-dark-bg{
+
+  &-dark-bg {
     background: $hue;
   }
 }
+
 .gray-dark {
   color: $gray-dark;
 }
@@ -55,30 +63,28 @@
 }
 
 .white {
-  color: #FFFFFF;
-  -webkit-font-smoothing: antialiased;
+  color: #fff;
+
   &:hover {
-    color: #FFFFFF;
+    color: #fff;
   }
 }
 
 .white-opacity {
   @extend .white;
-  opacity: 0.7;
+  opacity: .7;
 }
 
 .white-link--opacity {
   @extend .white;
-  opacity: 0.7;
-  transition: opacity 0.2s;
-  &:hover {
+  opacity: .7;
+  transition: opacity .2s;
+
+  :hover {
     opacity: 1;
   }
 }
 
 ::selection {
-  background: #EBEBFF;
-}
-::-moz-selection {
-  background: #EBEBFF;
+  background: #ebebff;
 }

@@ -1,8 +1,8 @@
 mixin integration-item(name, url)
   option(value='#{url}') #{name}
 
-select(id="integrationDrop" selected="Select Integration Guide").margin-top-less.radius
-  +integration-item("Select Integration Guide","#")
+select(id="integrationDrop" selected="Select Integration").margin-top-less.radius
+  +integration-item("Select Integration","#")
   +integration-item("---","#")
   //- +integration-item("3DCart","3dcart")
   //- +integration-item("Adyen","/integrations/adyen")
@@ -50,4 +50,3 @@ select(id="integrationDrop" selected="Select Integration Guide").margin-top-less
   +integration-item("Wordpress","/integrations/wordpress")
   +integration-item("Xcart","/integrations/xcart")
   +integration-item("ZenCart","/integrations/zen-cart")
-

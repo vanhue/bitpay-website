@@ -1,10 +1,10 @@
-@include elementToClass('h1');
-@include elementToClass('h2');
-@include elementToClass('h3');
-@include elementToClass('h4');
-@include elementToClass('h5');
-@include elementToClass('h6');
-@include elementToClass('small');
+@include element-to-class('h1');
+@include element-to-class('h2');
+@include element-to-class('h3');
+@include element-to-class('h4');
+@include element-to-class('h5');
+@include element-to-class('h6');
+@include element-to-class('small');
 
 .bold {
   font-weight: bold;
@@ -20,7 +20,7 @@
 
 .uppercase {
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
 }
 
 .letter-spacing-1 {
@@ -28,11 +28,11 @@
 }
 
 .text-shadow {
-  text-shadow: 1px 2px 0px rgba(0,0,0,0.50)
+  text-shadow: 1px 2px 0 rgba(0, 0, 0, .5);
 }
 
 .text-shadow-less {
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.15)
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .15);
 }
 
 .arrow:after,
@@ -63,10 +63,12 @@ h4,
 h5,
 h6 {
   .white & {
-    color: #FFFFFF;
+    color: #fff;
   }
+
   a {
     color: inherit;
+
     &:hover {
       color: inherit;
     }
@@ -128,8 +130,8 @@ pre {
   color: $gray-xlight;
   background: $gray-darker;
   border: 1px solid $gray-darkest;
-  box-shadow: inset 0 0 3px rgba(0,0,0,0.2);
-  padding: 0.5rem 1rem;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, .2);
+  padding: .5rem 1rem;
 }
 
 code {
@@ -146,7 +148,8 @@ code {
 
 .side-nav li {
   font-weight: 700;
-  margin-bottom: 0.15rem;
+  margin-bottom: .15rem;
+
   &.divider {
     height: 1em;
   }

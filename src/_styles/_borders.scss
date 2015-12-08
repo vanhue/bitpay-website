@@ -1,59 +1,51 @@
-@mixin addBorder($name, $value, $breakpoint) {
-  @each $side in 'top', 'right', 'bottom', 'left' {
-    .#{$breakpoint}border-#{$side}-#{$name} {
-      border-#{$side}: #{$value};
-    }
-  }
-  .#{$breakpoint}border-vertical-#{$name} {
-    border-top: #{$value};
-    border-bottom: #{$value};
-  }
-  .#{$breakpoint}border-horizontal-#{$name} {
-    border-left: #{$value};
-    border-right: #{$value};
-  }
-  .#{$breakpoint}border-#{$name} {
-    border: #{$value};
-  }
-}
-
 // for the bottom centered border
 .header--bottom-border,
 .header--bottom-border-left {
   position: relative;
   margin-bottom: 3rem;
+
   &:after {
-    content: "";
+    content: '';
     height: 3px;
     width: 4rem;
     background: $blue-medium;
     position: absolute;
     bottom: -1rem;
   }
+
   .white & {
     &:after {
-      background: #FFFFFF;
+      background: #fff;
     }
   }
 }
-.border-left{
-  border-left:1px solid $gray-light;
-}
-.header--bottom-border:after {
-  left: calc(50% - 2rem);
+
+.border-left {
+  border-left: 1px solid $gray-light;
 }
 
-.header--bottom-border-left:after {
-  left: 0;
+.header--bottom-border {
+  &:after {
+    left: calc(50% - 2rem);
+  }
 }
+
+
+.header--bottom-border-left {
+  &:after {
+    left: 0;
+  }
+}
+
 .body-text--bottom-border {
   position: relative;
   padding-bottom: 10px;
-    &:after {
-    content: "";
+
+  &:after {
+    content: '';
     width: 25px;
     height: 2px;
-    background: #4683E8;
+    background: #4683e8;
     position: absolute;
     top: 30px;
     left: 0;

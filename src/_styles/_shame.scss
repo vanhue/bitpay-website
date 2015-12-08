@@ -1,3 +1,111 @@
+//sass-lint can't process this block
+@mixin addBorder($name, $value, $breakpoint) {
+  @each $side in 'top', 'right', 'bottom', 'left' {
+    .#{$breakpoint}border-#{$side}-#{$name} {
+      border-#{$side}: #{$value};
+    }
+  }
+  .#{$breakpoint}border-vertical-#{$name} {
+    border-top: #{$value};
+    border-bottom: #{$value};
+  }
+  .#{$breakpoint}border-horizontal-#{$name} {
+    border-left: #{$value};
+    border-right: #{$value};
+  }
+  .#{$breakpoint}border-#{$name} {
+    border: #{$value};
+  }
+}
+
+// breakpoint classes
+// .breakpoint-class[-suffix]
+
+$breakpoints: (
+  'small-only': $small-only,
+  'small': $small-up,
+  'medium-only': $medium-only,
+  'medium': $medium-up,
+  'large-only': $large-only,
+  'large': $large-up,
+  'xlarge-only': $xlarge-only,
+  'xlarge': $xlarge-up,
+  'xxlarge-only': $xxlarge-only,
+  'xxlarge': $xxlarge-up,
+);
+
+$suffixes: (
+  '-none': 0,
+  '-less': 1em,
+  ''     : 2em,
+  '-more': 3em,
+  '-most': 6em
+);
+
+@mixin breakpointedUtils($breakpoint){
+  @each $suffix, $val in $suffixes {
+    @each $property in 'padding', 'margin' {
+      @each $side in 'top', 'right', 'bottom', 'left' {
+        .#{$breakpoint}#{$property}-#{$side}#{$suffix}{
+          #{$property}-#{$side}: #{$val};
+        }
+      }
+      .#{$breakpoint}#{$property}-vertical#{$suffix}{
+        #{$property}-top: #{$val};
+        #{$property}-bottom: #{$val};
+      }
+      .#{$breakpoint}#{$property}-horizontal#{$suffix}{
+        #{$property}-left: #{$val};
+        #{$property}-right: #{$val};
+      }
+      .#{$breakpoint}#{$property}#{$suffix}{
+        #{$property}: #{$val};
+      }
+    }
+  }
+  .#{$breakpoint}float-left{
+    float: left !important;
+  }
+  .#{$breakpoint}float-right{
+    float: right !important;
+  }
+
+  @include addBorder('gray', (1px solid $gray-light), $breakpoint);
+  @include addBorder('light', (1px solid rgba(255,255,255,0.1)), $breakpoint);
+}
+
+@include breakpointedUtils(null);
+@each $breakpoint, $settings in $breakpoints {
+  @media #{$settings} {
+     @include breakpointedUtils($breakpoint + '-');
+  }
+}
+
+@mixin pulse-every($every, $id) {
+  .pulse-#{$id} {
+    @extend %pulse;
+    animation-name: pulsate-#{$id};
+    animation-duration: $every+#{ms};
+  }
+
+  $ringAnimLength: 1400/$every;
+  @keyframes pulsate-#{$id} {
+    #{100% - ($ringAnimLength * 100)} { transform: scale(0.1,0.1); opacity: 0.0}
+    #{100% - ($ringAnimLength * 50)} { opacity: 1.0}
+    100% { transform: scale(1.4,1.4); opacity: 0.0}
+  }
+}
+
+@include pulse-every(2000, '1');
+@include pulse-every(3000, '2');
+@include pulse-every(5000, '3');
+@include pulse-every(7000, '4');
+
+.white {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
 .event-title-two {
   margin-top:6.8em;
   @media #{$small-only} {margin-top: 4em;}
@@ -340,3 +448,23 @@
     }
 
   }
+
+// magellan output is broken by sass 2
+[data-magellan-expedition], [data-magellan-expedition-clone] {
+  background: #fff;
+  min-width: 100%;
+  padding: 10px;
+  z-index: 50;
+}
+
+[data-magellan-expedition] .sub-nav, [data-magellan-expedition-clone] .sub-nav {
+  margin-bottom: 0;
+}
+
+[data-magellan-expedition] .sub-nav dd, [data-magellan-expedition-clone] .sub-nav dd {
+  margin-bottom: 0;
+}
+
+[data-magellan-expedition] .sub-nav a, [data-magellan-expedition-clone] .sub-nav a {
+  line-height: 1.8em;
+}

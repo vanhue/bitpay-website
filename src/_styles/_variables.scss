@@ -1,20 +1,20 @@
 // Allows the use of rem-calc() or lower-bound()
-@import "../../components/foundation/scss/foundation/functions";
+@import '../../components/foundation/scss/foundation/functions';
 
 // colors
-$blue-darker: #0E1C40;
-$blue-dark: #18347B;
-$blue-medium: #3354A8;
-$blue-light: #4683E8;
-$blue-pale: #6389ED;
+$blue-darker: #0e1c40;
+$blue-dark: #18347b;
+$blue-medium: #3354a8;
+$blue-light: #4683e8;
+$blue-pale: #6389ed;
 $gray-darkest: #343849;
 $gray-darker: #565966;
-$gray-dark: #7A7D8C;
+$gray-dark: #7a7d8c;
 $gray-medium: #929396;
-$gray-light: #DEDFE1;
-$gray-xlight: #FAFAFD;
-$bitpay-blue: #1A3A8B;
-$orange: #F5A623;
+$gray-light: #dedfe1;
+$gray-xlight: #fafafd;
+$bitpay-blue: #1a3a8b;
+$orange: #f5a623;
 
 //override foundation variables
 $primary-color: $blue-light;
@@ -36,14 +36,14 @@ $side-nav-link-padding: rem-calc(2 10);
 
 //off canvas
 $off-canvas-bg: #172852;
-$menu-slide: "transform 200ms ease-in-out";
+$menu-slide: 'transform 200ms ease-in-out';
 
 
 // typography
 
 $body-font-color: $gray-darker;
-$font-family-sans-serif: 'Karla', "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-$font-family-monospace: Menlo, Consolas, "Liberation Mono", Courier, monospace;
+$font-family-sans-serif: 'Karla', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$font-family-monospace: Menlo, Consolas, 'Liberation Mono', Courier, monospace;
 $header-font-family: $font-family-sans-serif;
 $header-font-color: $gray-darkest;
 $h1-font-size: rem-calc(36);

@@ -1,4 +1,4 @@
-(function () {
+(function() {
   'use strict';
 
   var referralScope = {};
@@ -13,15 +13,20 @@
     if (!referralScope.swfStore) {
       referralScope.swfStore = new window.SwfStore({
         namespace: 'bitpay',
+        // jscs:disable
+        /* jshint ignore:start */
         swf_url: 'https://bitpay.com/downloads/storage.swf',
-        onerror: function () {
+        /* jshint ignore:end */
+        // jscs:enable
+        onerror: function() {
           console.log('FLASH Failed to load.');
         },
-        onready: function () {
+        onready: function() {
           referralScope.flashReady = true;
 
-          referralScope.ids.flashAid = referralScope.swfStore.get('affiliateId');
-          if(referralScope.ids.flashAid) {
+          referralScope.ids.flashAid =
+          referralScope.swfStore.get('affiliateId');
+          if (referralScope.ids.flashAid) {
             setJsCookie(referralScope.ids.flashAid);
           } else if (referralScope.ids.cookieAid) {
             setFlashCookie(referralScope.ids.cookieAid);
@@ -33,7 +38,7 @@
       });
     }
 
-    referralScope.setUrlAid = function (oid) {
+    referralScope.setUrlAid = function(oid) {
       if (!referralScope.ids.urlAid) {
         referralScope.ids.urlAid = oid;
 
@@ -50,13 +55,15 @@
   initializeReferralData();
 
   function setFlashCookie(id) {
-    if (id && id.length> 0 && referralScope.flashReady && !referralScope.swfStore.get('affiliateId')) {
+    if (id && id.length > 0 &&
+      referralScope.flashReady &&
+       !referralScope.swfStore.get('affiliateId')) {
       referralScope.swfStore.set('affiliateId', id);
     }
   }
 
   function setJsCookie(id) {
-    if (id && id.length> 0 && !readJSCookie('bp-referral-code')) {
+    if (id && id.length > 0 && !readJSCookie('bp-referral-code')) {
       referralScope.ids.cookieAid = id;
       createCookie('bp-referral-code', id, 9999);
     }
@@ -64,7 +71,8 @@
 
   function readJSCookie(name) {
     name += '=';
-    for (var ca = document.cookie.split(/;\s*/), i = ca.length - 1; i >= 0; i--) {
+    var ca = document.cookie.split(/;\s*/);
+    for (var i = ca.length - 1; i >= 0; i--) {
       if (!ca[i].indexOf(name)) {
         return ca[i].replace(name, '');
       }
@@ -82,10 +90,10 @@
   }
 
   function getUrlParameter(sParam) {
-    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-      sURLVariables = sPageURL.split('&'),
-      sParameterName,
-      i;
+    var sPageURL = decodeURIComponent(window.location.search.substring(1));
+    var sURLVariables = sPageURL.split('&');
+    var sParameterName;
+    var i;
 
     for (i = 0; i < sURLVariables.length; i++) {
       sParameterName = sURLVariables[i].split('=');
@@ -97,7 +105,7 @@
   }
 
   var oid = getUrlParameter('oid');
-  if(oid && oid.length > 0){
+  if (oid && oid.length > 0) {
     referralScope.setUrlAid(oid);
   }
 

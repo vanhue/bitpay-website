@@ -666,8 +666,8 @@
 
   // Not excluded from BBB, but must be clear BitPay can't process payments for
   // entities in sanctioned territories.
-  for (var code in currencies){
-    if(currencies[code].sanctioned){
+  for (var code in currencies) {
+    if (currencies[code].sanctioned) {
       delete currencies[code];
     }
   }
