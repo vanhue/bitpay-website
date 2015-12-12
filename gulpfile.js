@@ -4,7 +4,7 @@ var gulp = require('gulp');
 gulp.environment = {};
 gulp.devDeps = {};
 
-var runSequence = require('run-sequence');
+var runSequence = require('run-sequence').use(gulp);
 
 gulp.task('default', function(cb) {
   runSequence('build', 'hash', cb);

@@ -2,7 +2,7 @@
 
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
-var runSequence = require('run-sequence');
+var runSequence = require('run-sequence').use(gulp);
 
 gulp.task('code-review', function(cb) {
   runSequence(['jscs-jshint', 'scss-lint'], cb);

@@ -2,7 +2,7 @@
 
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
-var runSequence = require('run-sequence');
+var runSequence = require('run-sequence').use(gulp);
 
 // Compile & autoprefix styles
 gulp.task('sass', function() {
