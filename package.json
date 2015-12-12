@@ -10,7 +10,8 @@
     "gulp-replace": "^0.5.4"
   },
   "scripts": {
-    "install": "gulp"
+    "install": "gulp",
+    "test": "gulp"
   },
   "engines": {
     "node": ">=0.10.0"

@@ -716,7 +716,6 @@
   &:before {
     content: '';
     position: absolute;
-    z-index: -1;
     background: lighten($gray-darker, 40%);
     width: 110px;
     height: 1px;
