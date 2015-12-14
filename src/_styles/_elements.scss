@@ -213,3 +213,29 @@ select {
   letter-spacing: 1px;
   text-shadow: 0 1px 0 rgba(0, 0, 0, .16);
 }
+
+.bitgive-card {
+  @extend .bg-white;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.19);
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 1em;
+
+  &:before {
+    @extend .bg-white;
+    background-image: url("/images/integrations/bitgive.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    content: '';
+    position: relative;
+    top: -147px;
+    left: 179px;
+    border-radius: 100px;
+    height: 100px;
+    width: 100px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);
+    display: block;
+  }
+
+}

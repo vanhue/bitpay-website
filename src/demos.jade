@@ -1,0 +1,34 @@
+extends _layouts/primary
+
+block title
+  title Demos | BitPay
+
+block content
+  .section.bg-subtle-white-gradient.border-bottom-gray.border-top-gray
+    .row
+      .h1.text-center Test out BitPay
+      p.lead.text-center.margin-bottom-most Donate to the BitGive Foundation to see how our invoices work
+      
+      .bitgive-card.padding-top-most.padding-bottom.margin-top
+        .row
+          .large-12.columns
+            label Email (optional)
+              input(type="text")
+        .row
+          .large-6.columns.padding-right-less
+            label Amount
+              input(type="text" placeholder=".01")
+          .large-6.columns.padding-left-less
+            label Currency
+              select
+                option(value="BTC") BTC
+                option(value="USD") USD
+  
+  .section.bg-lightblue-gradient.border-top-gray
+    .row
+      .column.medium-8.medium-offset-2
+        h2.text-center.white Get Started
+        h4.text-center.white Join the world's most trusted bitcoin payment platform.
+    .row
+      .column.medium-8.medium-offset-2.text-center
+        a(href="/dashboard/signup").white.btn.btn-blue-solid.uppercase.bold.btn-margin Accept Bitcoin
