@@ -6,23 +6,63 @@ block title
 block content
   .section.bg-subtle-white-gradient.border-bottom-gray.border-top-gray
     .row
-      .h1.text-center Test out BitPay
-      p.lead.text-center.margin-bottom-most Donate to the BitGive Foundation to see how our invoices work
+      .h1.text-center.fade-in-down.delay-1 Test out BitPay
+      p.lead.text-center.margin-bottom-most.fade-in-down.delay-1 Donate to the BitGive Foundation to see how our invoices work
       
-      .bitgive-card.padding-top-most.padding-bottom.margin-top
+      form(action="https://bitpay.com/checkout" method="post" onsubmit="return bp.validateMobileCheckoutForm($('#donate'));")#donate.bitgive-card.padding-bottom.margin-top.fade-in-down.delay-3
+
         .row
           .large-12.columns
-            label Email (optional)
-              input(type="text")
+            label Email
+              input(name="orderID" type="email" class="input input-xlarge" placeholder="(optional)" maxlength=50 autocapitalize=off autocorrect=off)
+              input(name="action" type="hidden" value="checkout")
         .row
           .large-6.columns.padding-right-less
             label Amount
-              input(type="text" placeholder=".01")
-          .large-6.columns.padding-left-less
+              input(name="price" type="number" class="noscroll" value=".01" placeholder="Amount" maxlength="10" min="0.000006" step="0.000001")
+          .large-6.columns.padding-left-none
             label Currency
-              select
-                option(value="BTC") BTC
-                option(value="USD") USD
+              select(name="currency" value="{{currency}}")
+                option(selected='selected', value='BTC') BTC
+                option(value='USD') USD
+                option(value='EUR') EUR
+                option(value='GBP') GBP
+                option(value='AUD') AUD
+                option(value='BGN') BGN
+                option(value='BRL') BRL
+                option(value='CAD') CAD
+                option(value='CHF') CHF
+                option(value='CNY') CNY
+                option(value='CZK') CZK
+                option(value='DKK') DKK
+                option(value='HKD') HKD
+                option(value='HRK') HRK
+                option(value='HUF') HUF
+                option(value='IDR') IDR
+                option(value='ILS') ILS
+                option(value='INR') INR
+                option(value='JPY') JPY
+                option(value='KRW') KRW
+                option(value='LTL') LTL
+                option(value='LVL') LVL
+                option(value='MXN') MXN
+                option(value='MYR') MYR
+                option(value='NOK') NOK
+                option(value='NZD') NZD
+                option(value='PHP') PHP
+                option(value='PLN') PLN
+                option(value='RON') RON
+                option(value='RUB') RUB
+                option(value='SEK') SEK
+                option(value='SGD') SGD
+                option(value='THB') THB
+                option(value='TRY') TRY
+                option(value='ZAR') ZAR
+          input(type="hidden" name="data" value="OoQq3tRjNIMyQa6uQvSIpkPN0H6l054qNJpElai5XWoOMNqyEQADY3WdvPrBVnWIbXee2weB2O4QxDwZef3c+5whs/Lz8YoHdB96zFqlZ2hVb88bsDSqFe5xcEgAinuCfAqejgHVd8V2BIJFPPmDcAQQnns+akD8DbydqwJEIXdjIp/xTy4VxxDGKgsrS8Ee4WcRebWPwb+H1Ggw9iOKxsJ9RL6M37WYM8oEyuN8YdPD6Y9qKzYR0+tlkp1Jvzljbj9/ird9S/JosjSAECSMtg==")
+        .text-center
+          input(name='submit' src='https://bitpay.com/img/donate-md.png' type='image' alt='BitPay, the easy way to pay with bitcoin.')
+
+  
   
   .section.bg-lightblue-gradient.border-top-gray
     .row
