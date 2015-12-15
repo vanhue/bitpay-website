@@ -10,17 +10,17 @@ block content
       p.lead.text-center.margin-bottom-most.fade-in-down.delay-1 Donate to the BitGive Foundation to see how our invoices work
       
       form(action="https://bitpay.com/checkout" method="post" onsubmit="return bp.validateMobileCheckoutForm($('#donate'));")#donate.bitgive-card.padding-bottom.margin-top.fade-in-down.delay-3
-
+        .bitgive-avatar
         .row
           .large-12.columns
             label Email
               input(name="orderID" type="email" class="input input-xlarge" placeholder="(optional)" maxlength=50 autocapitalize=off autocorrect=off)
               input(name="action" type="hidden" value="checkout")
         .row
-          .large-6.columns.padding-right-less
+          .large-6.columns.medium-padding-right-less
             label Amount
               input(name="price" type="number" class="noscroll" value=".01" placeholder="Amount" maxlength="10" min="0.000006" step="0.000001")
-          .large-6.columns.padding-left-none
+          .large-6.columns.large-padding-left-none
             label Currency
               select(name="currency" value="{{currency}}")
                 option(selected='selected', value='BTC') BTC
