@@ -9,7 +9,7 @@ block content
       .h1.text-center.fade-in-down.delay-1 Test out BitPay
       p.lead.text-center.medium-margin-bottom-most.small-margin-bottom-more.fade-in-down.delay-1 Try a payment to the BitGive Foundation.
       
-      form(action="https://bitpay.com/checkout" method="post" onsubmit="return bp.validateMobileCheckoutForm($('#donate'));")#donate.bitgive-card.padding-bottom.margin-top.fade-in-down.delay-3
+      form(action="https://bitpay.com/checkout" method="post" onsubmit="return bp.validateMobileCheckoutForm($('#donate'));")#donate.bitgive-card.padding-bottom.margin-top.fade-in-down.delay-3.medium-padding-horizontal-more
         .bitgive-avatar
         .row
           .large-12.columns
@@ -17,7 +17,7 @@ block content
               input(name="orderID" type="email" class="input input-xlarge" placeholder="(optional)" maxlength=50 autocapitalize=off autocorrect=off)
               input(name="action" type="hidden" value="checkout")
         .row
-          .large-6.columns.medium-padding-right-less
+          .large-6.columns.large-padding-right-less
             label Amount
               input(name="price" type="number" class="noscroll" value=".01" placeholder="Amount" maxlength="10" min="0.000006" step="0.000001")
           .large-6.columns.large-padding-left-none
