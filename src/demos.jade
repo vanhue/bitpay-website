@@ -7,7 +7,7 @@ block content
   .section.bg-subtle-white-gradient.border-bottom-gray.border-top-gray
     .row
       .h1.text-center.fade-in-down.delay-1 Test out BitPay
-      p.lead.text-center.margin-bottom-most.fade-in-down.delay-1 Donate to the BitGive Foundation to see how our invoices work
+      p.lead.text-center.medium-margin-bottom-most.small-margin-bottom-more.fade-in-down.delay-1 Donate to the BitGive Foundation to see how our invoices work
       
       form(action="https://bitpay.com/checkout" method="post" onsubmit="return bp.validateMobileCheckoutForm($('#donate'));")#donate.bitgive-card.padding-bottom.margin-top.fade-in-down.delay-3
         .bitgive-avatar
@@ -60,7 +60,7 @@ block content
                 option(value='ZAR') ZAR
           input(type="hidden" name="data" value="OoQq3tRjNIMyQa6uQvSIpkPN0H6l054qNJpElai5XWoOMNqyEQADY3WdvPrBVnWIbXee2weB2O4QxDwZef3c+5whs/Lz8YoHdB96zFqlZ2hVb88bsDSqFe5xcEgAinuCfAqejgHVd8V2BIJFPPmDcAQQnns+akD8DbydqwJEIXdjIp/xTy4VxxDGKgsrS8Ee4WcRebWPwb+H1Ggw9iOKxsJ9RL6M37WYM8oEyuN8YdPD6Y9qKzYR0+tlkp1Jvzljbj9/ird9S/JosjSAECSMtg==")
         .text-center
-          input(name='submit' src='https://bitpay.com/img/donate-md.png' type='image' alt='BitPay, the easy way to pay with bitcoin.')
+          input(name='submit' src='https://bitpay.com/img/donate-md.png' type='image' alt='BitPay, the easy way to pay with bitcoin.').margin
 
   
   
