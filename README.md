@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/bitpay/bitpay-website.svg)](https://travis-ci.org/bitpay/bitpay-website) [![Stories in Ready](https://badge.waffle.io/bitpay/bitpay-website.png?label=ready&title=Ready)](https://waffle.io/bitpay/bitpay-website)
+[![Build Status](https://travis-ci.com/bitpay/bitpay-website.svg?token=gx4KpwugyoXSLZ3soZpN&branch=master)](https://travis-ci.com/bitpay/bitpay-website) [![Stories in Ready](https://badge.waffle.io/bitpay/bitpay-website.png?label=ready&title=Ready)](https://waffle.io/bitpay/bitpay-website)
 
 # Developing
 
