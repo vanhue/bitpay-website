@@ -66,7 +66,19 @@ block information
       th.small-4.padding-bottom-less Platform(s)
       th.small-2.padding-bottom-less Bitcoin URIs
       th.small-2.padding-bottom-less Payment Protocol
-      
+
+    +wallet("Copay Bitcoin Wallet", "https://copay.io")
+      td.text-left
+        +ios()
+        +android()
+        +windowsPhone()
+        +chrome()
+        +mac()
+        +windows()
+        +linux()
+      td.checkmark
+      td.checkmark
+
     +wallet("Bitcoin Core (Satoshi client)", "https://bitcoin.org/")
       td.text-left
         +mac()
@@ -80,22 +92,17 @@ block information
         +android()
       td.checkmark
       td.checkmark
+        
+    +wallet("BitGo Wallet", "https://www.bitgo.com/wallet")
+      td.text-left
+        +chrome()
+        +web()
+      td.checkmark
+      td.checkmark
     
     +wallet("Breadwallet", "https://itunes.apple.com/us/app/breadwallet-bitcoin-wallet/id885251393")
       td.text-left
         +ios()
-      td.checkmark
-      td.checkmark
-    
-    +wallet("Copay Bitcoin Wallet", "https://copay.io")
-      td.text-left
-        +ios()
-        +android()
-        +windowsPhone()
-        +chrome()
-        +mac()
-        +windows()
-        +linux()
       td.checkmark
       td.checkmark
         
