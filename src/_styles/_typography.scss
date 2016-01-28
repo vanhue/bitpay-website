@@ -144,8 +144,6 @@ code {
   list-style-type: none;
 }
 
-
-
 .side-nav li {
   font-weight: 700;
   margin-bottom: .15rem;
@@ -153,4 +151,20 @@ code {
   &.divider {
     height: 1em;
   }
+}
+
+.tutorial-number {
+  align-items: center;
+  border: 2px $blue-medium solid;
+  border-radius: 2em;
+  color: $blue-medium;
+  display: flex;
+  float: left;
+  font-size: .9em;
+  height: 1.5em;
+  justify-content: center;
+  margin-top: -.1em;
+  margin-right: .8em;
+  text-align: center;
+  width: 1.5em;
 }
