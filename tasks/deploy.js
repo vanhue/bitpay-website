@@ -15,6 +15,7 @@ gulp.task('replace', ['default'], function() {
   return gulp.src('./dist/**/*.{html,css,js}')
     .pipe($.replace('src="/', 'src="/bitpay-website/'))
     .pipe($.replace('href="/', 'href="/bitpay-website/'))
+    .pipe($.replace('value="/', 'value="/bitpay-website/'))
     .pipe($.replace('url(\'/', 'url(\'/bitpay-website/'))
     .pipe(gulp.dest('dist'));
 });

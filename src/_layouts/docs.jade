@@ -10,7 +10,7 @@ block content
   - var docsMenu = { 'Getting Started': '/docs', 'Selling Online': '/docs/ecommerce', 'Selling in Person': '/docs/retail', 'Banking & Settlements': '/docs/settlement' };
   - var usecaseMenu = { 'Email Billing': '/docs/billing', 'Donations': '/docs/donations'}
   - var devMenu = { 'Creating Invoices': '/docs/create-invoice', 'Displaying Invoices': '/docs/display-invoice', 'Invoice Callbacks': '/docs/invoice-callbacks', 'Invoice States': '/docs/invoice-states', 'Testing': '/docs/testing' }
-  - var resourceMenu = { 'Bitcoin Wallet Comparison': '/docs/wallets', 'BBB Exchange Rate': '/bitcoin-exchange-rates' }
+  - var resourceMenu = { 'How to Pay with Bitcoin': '/pay-with-bitcoin', 'Wallet Comparison': '/docs/wallets', 'BBB Exchange Rate': '/bitcoin-exchange-rates' }
   
   mixin linkList(menu)
     each val, key in menu
@@ -35,7 +35,11 @@ block content
         li.uppercase.h3 Resources
         +linkList(resourceMenu)
         li
-          a(href="https://support.bitpay.com") Help &amp; Support
+          a(href="https://help.bitpay.com") Help &amp; Support
+        li.divider
+        li.uppercase.h3 Integration Guides
+        .padding-right
+          include ../_includes/integration-dropdown
 
     .column.large-7.xlarge-9
       block information

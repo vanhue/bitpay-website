@@ -1,46 +1,90 @@
 // Font colors
 
-.blue-light {
-  color: $blue-light;
+.blue {
+
+  &-light {
+    $hue: $blue-light;
+    color: $hue;
+
+    &-bg {
+      background: $hue;
+    }
+  }
+
+  &-pale {
+    $hue: $blue-pale;
+    color: $hue;
+
+    &-bg {
+      background: $hue;
+    }
+  }
+
+  &-medium {
+    $hue: $blue-medium;
+    color: $hue;
+
+    &-bg {
+      background: $hue;
+    }
+  }
+
+  &-dark {
+    $hue: $blue-dark;
+    color: $hue;
+
+    &-bg {
+      background: $hue;
+    }
+  }
+
 }
 
-.blue-medium {
-  color: $blue-medium;
-}
 
-.blue-dark {
-  color: $blue-dark;
+.orange {
+  $hue: $orange;
+  color: $hue;
+
+  &-bg {
+    background: $hue;
+  }
+
+  &-dark-bg {
+    background: $hue;
+  }
 }
 
 .gray-dark {
   color: $gray-dark;
 }
 
+.gray-darker {
+  color: $gray-darker;
+}
+
 .white {
-  color: #FFFFFF;
-  -webkit-font-smoothing: antialiased;
+  color: #fff;
+
   &:hover {
-    color: #FFFFFF;
+    color: #fff;
   }
 }
 
 .white-opacity {
   @extend .white;
-  opacity: 0.7;
+  opacity: .7;
 }
 
 .white-link--opacity {
   @extend .white;
-  opacity: 0.7;
-  transition: opacity 0.2s;
-  &:hover {
+  opacity: .7;
+  transition: opacity .2s;
+
+  :hover {
     opacity: 1;
   }
 }
 
 ::selection {
-  background: #EBEBFF;
-}
-::-moz-selection {
-  background: #EBEBFF;
+  background: #ebebff;
 }

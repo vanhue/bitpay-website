@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="29px" height="22px" viewBox="0 0 29 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
-    <title>downloadcloud</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Brand-Guide" sketch:type="MSArtboardGroup" transform="translate(-763.000000, -1065.000000)" fill="#FFFFFF">
-            <g id="Logo-Colors" sketch:type="MSLayerGroup" transform="translate(377.000000, 895.000000)">
-                <g id="Logo-Copy" transform="translate(229.000000, 87.000000)" sketch:type="MSShapeGroup">
-                    <g id="Logo---Light-Copy-3-+-Rectangle-24-Copy-Mask">
-                        <path d="M186.000076,97.6249715 C186.000076,94.2013514 183.616968,91.3147697 180.428302,90.5763419 C179.656309,86.3471641 175.96417,83.1249335 171.500038,83.1249335 C166.498868,83.1249335 162.437514,87.1862867 162.437514,92.1874572 L162.437514,92.254587 C159.349543,92.6909308 157,95.3425581 157,98.5312239 C157,102.021974 159.853017,104.87499 163.343767,104.87499 L170.358831,104.87499 L164.115759,98.6654835 C163.947935,98.497659 163.91437,98.2291397 163.9815,97.9941854 C164.082194,97.7592311 164.317149,97.6249715 164.552103,97.6249715 L169.083365,97.6249715 L169.083365,91.5161592 L173.916711,91.5161592 L173.916711,97.6249715 L178.447973,97.6249715 C178.682927,97.6249715 178.917882,97.7592311 179.018576,97.9941854 C179.085706,98.2291397 179.052141,98.497659 178.884317,98.6654835 L172.641245,104.87499 L178.750057,104.87499 C182.74428,104.87499 186.000076,101.619195 186.000076,97.6249715 L186.000076,97.6249715 Z" id="downloadcloud"></path>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="29" height="22" viewBox="0 0 29 22" xmlns="http://www.w3.org/2000/svg"><title>downloadcloud</title><path d="M29 14.625c0-3.424-2.383-6.31-5.572-7.05-.772-4.228-4.464-7.45-8.928-7.45-5 0-9.062 4.06-9.062 9.062v.068A6.333 6.333 0 0 0 0 15.53c0 3.492 2.853 6.345 6.344 6.345h7.015l-6.244-6.21c-.168-.167-.202-.436-.134-.67a.62.62 0 0 1 .57-.37h4.53v-6.11h4.835v6.11h4.53a.62.62 0 0 1 .572.37c.066.234.032.503-.136.67l-6.243 6.21h6.11c3.994 0 7.25-3.256 7.25-7.25z" fill="#FFF" fill-rule="evenodd"/></svg>

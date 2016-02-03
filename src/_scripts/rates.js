@@ -53,13 +53,17 @@
             }
           }).
         error(function(data, status, headers, config) {
-          console.error('Error fetching rates from: ' + ratesAPI + '. Status: ' + status);
+          console.error(
+            'Error fetching rates from: ' + ratesAPI + '. Status: ' + status
+          );
         });
       }
 
       function getRate(baseCurrencyCode, quoteCurrencyCode) {
-        if (currentRatePerBTC.hasOwnProperty(baseCurrencyCode) && currentRatePerBTC.hasOwnProperty(quoteCurrencyCode)) {
-          return currentRatePerBTC[quoteCurrencyCode] / currentRatePerBTC[baseCurrencyCode];
+        if (currentRatePerBTC.hasOwnProperty(baseCurrencyCode) &&
+         currentRatePerBTC.hasOwnProperty(quoteCurrencyCode)) {
+          return currentRatePerBTC[quoteCurrencyCode] /
+           currentRatePerBTC[baseCurrencyCode];
         }
       }
       return {
@@ -70,7 +74,8 @@
   angular.module('ratesApp.price.priceDirective', [
       'ratesApp.price.ratesService',
     ])
-    .directive('price', ['ratesService', 'currencyFilter', function(ratesService, currencyFilter) {
+    .directive('price', ['ratesService', 'currencyFilter',
+     function(ratesService, currencyFilter) {
       var nonbreakingSpace = '\u00A0';
       return {
         restrict: 'E',
@@ -86,7 +91,9 @@
             if (!rate) {
               return nonbreakingSpace;
             }
-            return currencyFilter(rate, window.currencies[scope.valuedIn].symbol, 2);
+            return currencyFilter(
+              rate, window.currencies[scope.valuedIn].symbol, 2
+            );
           };
         }
       };
