@@ -78,24 +78,22 @@ $suffixes: (
   }
 }
 
-.block {
-  display: block;
+.clear {
+  clear: both;
 }
-.clear{
-  clear:both;
-}
+
 .selectable {
   user-select: all;
 }
+
 .unselectable {
   user-select: none;
 }
+
 .only-text-selectable {
   user-select: text;
 }
-.no-padding-left{
-  padding-left:0;
-}
+
 .radius {
   border-radius: 5px;
 }

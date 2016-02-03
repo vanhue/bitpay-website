@@ -22,7 +22,7 @@ block content
     .padding-vertical.bg-gray.border-vertical-gray
       .row
         .column.large-5.xlarge-6.small-only-margin-bottom
-          h5.uppercase.header__bottom-border-left Current Rate (BBB)
+          h5.uppercase.header--bottom-border-left Current Rate (BBB)
           p.lead.margin-bottom-none 1 BTC
             span.small-icon.background-contain.h5.margin-vertical-none(style="background-image: url('/images/rate.svg');  width: 2em;")
             | USD
@@ -34,7 +34,7 @@ block content
         
             
         .column.large-7.xlarge-6
-          h5.uppercase.header__bottom-border-left Popular Currencies
+          h5.uppercase.header--bottom-border-left Popular Currencies
           p 1 BTC
             span.small-icon.background-contain.h5.margin-vertical-none(style="background-image: url('/images/rate.svg');  width: 1.5em; height: 0.75em; top: 0;")
           table(style="width: 100%;").small-smaller-text.line-height-more
@@ -47,7 +47,7 @@ block content
     .section
       .row
         .column.large-6
-          h2.header__bottom-border-left All Exchange Rates
+          h2.header--bottom-border-left All Exchange Rates
         .column.large-6
           form
             input.rates-search(placeholder="Filter currencies..." type="search" name="search" ng-model="currenciesFilter")
@@ -66,7 +66,7 @@ block content
     .section.bg-gray.border-top-gray#bbb
       .row
         .column.medium-6.small-only-margin-bottom
-          h2.header__bottom-border-left Bitcoin Best Bid Rate
+          h2.header--bottom-border-left Bitcoin Best Bid Rate
           p.lead BitPay consolidates market depth from multiple exchanges to provide buyers with a Bitcoin Best Bid (BBB) exchange rate. We currently calculate the BBB based on bitcoin/US Dollar rates because of maximum liquidity.
           p To calculate the exchange rate for US Dollars, we pull the market depth from exchanges with adequate liquidity and withdrawal capability in USA and the Eurozone. The exchange order books are merged into a Consolidated Level II table.
           p Exchange rates for non-USD currencies are provided by the <a href="http://openexchangerates.org" target="_blank"> Open Exchange Rates API</a> at the time the invoice is generated.
