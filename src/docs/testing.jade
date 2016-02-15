@@ -10,7 +10,8 @@ append vars
 block information
   h2.header--bottom-border-left Testing
   p.lead For development and testing, BitPay users can access  #[a(href="https://test.bitpay.com/") test.bitpay.com], a mirror of our production site running on the the Bitcoin Testnet. 
-  p Developers must complete the normal signup process, but accounts on this server will be auto-approved. Any API requests must be directed to #[strong test.bitpay.com], and any clients must complete the client pairing process against this server as well. Finally, a testnet-compatible wallet must be used to make test payments.
+  p Developers must complete the normal signup process, but accounts on this server will be auto-approved to process up to $1,000 per day and $10,000 annually in test transactions. To process a greater volume in test transactions, please email #[a(href="support@bitpay.com")] requesting a tier upgrade. 
+  p Before you begin testing, note that any API requests must be directed to #[strong test.bitpay.com], and any clients must complete the client pairing process against this server as well. Finally, a testnet-compatible wallet must be used to make test payments.
   p Below are some helpful pointers for getting started with #[strong test.bitpay.com]:
 
   h3#setup Merchant Account Setup
@@ -56,8 +57,8 @@ block information
     p.lead Select the send option for the testnet faucet, then return to your wallet to see the newly deposited test funds!
   
   h3#recycling Round Trip Testing 
-  p In order to recycle your test coins, set your #[strong test.bitpay.com] settlement address to your Copay wallet's receive address and set payment at 100&percnt; BTC. 
-  p Setting up your merchant account this way allows the bitcoin you send for payment to be circulated back to you the following day when merchant payouts are run.
+  p In order to recycle your test coins, set your #[strong test.bitpay.com] settlement address to your testnet wallet's receiving address (note: all testnet addresses begin with the letter "m" rather than the numeric digit of standard bitcoin addresses) and set payment at 100&percnt; BTC. 
+  p Setting up your merchant account this way allows the bitcoin you send for payment to be circulated back to you when merchant payouts are run.
   
   h3#testing Testing Considerations 
   p Testing may involve not only the integration of the BitPay service and the payment of invoices but also how you handle common payment exceptions. 
