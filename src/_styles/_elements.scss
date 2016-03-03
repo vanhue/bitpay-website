@@ -256,3 +256,21 @@ select {
     display: block;
   }
 }
+.color-profile{
+  @extend .radius;
+  margin-left:3%;
+  width:45%;
+
+  ul{
+    margin-top:70px;
+    margin-left:0;
+    list-style-type: none;
+    li{
+      width:100%;
+      display: block;
+      color:rgba(255,255,255,0.5);
+
+    }
+  }
+
+}

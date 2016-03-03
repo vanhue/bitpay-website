@@ -301,44 +301,16 @@ $suffixes: (
   }
 }
 
-.brand-content > .row{
-    margin:0;
-}
 
-// Brand Guide
-.brand-guide{
-  .side-nav{
-    background:none;
-    &.fixed{
-      @extend .bg-gray-halfpage-gradient;
-    }
+.side-nav.fixed{
+    @extend .bg-gray-halfpage-gradient;
   }
-  .medium-white-fade-top{
-    box-shadow: 0 -107px 300px 300px #fff;
-    position: relative;
-    z-index: 51;
-  }
-  .cta{
-    position: relative;
-    z-index: 51;
-    bottom:-1px;
-  }
-  .table{
-    padding: 20px 0;
-    .row{
-      margin:0;
-    }
-  }
+.side-nav[data-magellan-expedition], .side-nav[data-magellan-expedition-clone]{
+background:#FAFAFB;
 }
+// Brand Guide
+
 .brand-content{
-  border-left:1px solid $gray-light;
-  z-index: 52;
-  hr {
-    margin: 40px 0;
-  }
-  h5{
-    margin-top:20px;
-  }
   .download{
       height:50px;
       width:50px;
@@ -347,33 +319,11 @@ $suffixes: (
       right: 33px;
       margin-top: -23px;
       display: none;
-
   }
 
-  .color-profile{
-    @extend .radius;
-    margin-left:3%;
-    width:45%;
-    h5{
-      color:#ffffff;
-      margin-top:30px;
-    }
-    ul{
-      margin-top:80px;
-      margin-left:0;
-      list-style-type: none;
-      li{
-        width:100%;
-        display: block;
-        color:rgba(255,255,255,0.5);
-
-      }
-    }
-
-  }
   .image{
     &:hover{
-      background:$bitpay-blue;
+      background:#fff;
       img{
         opacity: 0.2;
       }
@@ -383,16 +333,8 @@ $suffixes: (
     }
 
   }
-  .inline-list{
-    padding: 8px 0;
-    background-color: #FAFAFB;
-    border: 1px solid #DEDFE1;
-    border-top:0;
 
-  }
-  .capitalization{
-    border: 1px solid $gray-light;
-  }
+
 }
   .pricing{
     max-width: 58.75rem;

@@ -1,17 +1,8 @@
 // Brand Guide
 
 .brand-guide{
-  .side-nav{
-    background:none;
-    &.fixed{
-      @extend .brand-bg;
-    }
-  }
-  .medium-white-fade-top{
-    box-shadow: 0 -107px 300px 300px #fff;
-    position: relative;
-    z-index: 51;
-  }
+
+
   .cta{
     position: relative;
     z-index: 51;
