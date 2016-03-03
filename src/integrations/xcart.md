@@ -19,11 +19,11 @@ You must also have already installed the [X-Cart Gold ecommerce store software.]
 
 4. Click the **"Payment Methods"** tab, check the box next to "BitPay", and select **"Apply Changes".**
 
-5. [Create an API Key](https://bitpay.com/dashboard/login/eyJ0b1N0YXRlTmFtZSI6Im1lbnUuZGFzaGJvYXJkIiwidG9QYXJhbXMiOnsicGFnZSI6ImFwaS10b2tlbnMifX0=) in your BitPay merchant dashboard.
+5. Create a Legacy API Key in your BitPay merchant dashboard.
 
 6. Select **"Configure"** in your admin dashboard.
 
-7. Copy and paste the API Key into the required field to pair your accounts.
+7. Copy and paste the Legacy API Key into the required field to pair your accounts.
 
 8. Select a preferred transaction speed setting.
 
