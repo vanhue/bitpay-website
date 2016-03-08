@@ -61,3 +61,8 @@ $accordion-navigation-hover-bg-color: #fff;
 $accordion-navigation-active-bg-color: #fff;
 $accordion-navigation-font-color: $blue-light;
 $accordion-navigation-padding: 0;
+
+
+// shame
+// magellan output is broken by sass 2
+$include-html-magellan-classes: false;
