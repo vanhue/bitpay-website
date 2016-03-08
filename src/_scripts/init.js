@@ -1,5 +1,6 @@
 (function() {
   'use strict';
+  document.getElementById('currentYear').innerHTML = new Date().getFullYear();
   InstantClick.on('change', function() {
     jQuery(document).foundation();
     initSmoothScroll();
