@@ -57,7 +57,10 @@
     if (settlementSelector.length) {
       settlementSelector.on('change', function() {
         jQuery('.settlementDetails').hide();
-        jQuery('#' + this.value).show();
+        var currencies = this.value.split(',');
+        jQuery.each(currencies, function(index, val) {
+          jQuery('#' + val).show();
+        });
       });
     }
   }

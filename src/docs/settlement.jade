@@ -26,7 +26,7 @@ block information
             select#settlementDrop.margin-top-less
               option(value="aud") Australia
               option(value="cad") Canada
-              option(value="gbp") Great Britain
+              option(value="gbp,eur") Great Britain
               option(value="mxn") Mexico
               option(value="nzd") New Zealand
               option(value="usd" selected) United States
@@ -66,12 +66,13 @@ block information
         mixin currency-name(name, flag)
           .row
             .column
-              .h3(style="line-height: 1.15;") #{name}
+              hr.margin-bottom.margin-top-less.xlarge-margin-top-none(style="margin-left: -2rem; margin-right: -2rem;")
+              .h4.header--bottom-border-left(style="line-height: 1.15;") #{name}
                 if flag
                   span.small-icon.background-contain.h5(style="background-image: url('/images/flags/#{flag}.png'); vertical-align: middle; position: relative; margin-left: 0.5rem; top: 0px;")
                 else
                   span.small-icon.background-contain.h5(style="vertical-align: middle; position: relative; margin-left: 0.5rem; top: 0px;")
-          hr.margin-bottom.margin-top-less.xlarge-margin-top-none(style="margin-left: -2rem; margin-right: -2rem;")
+
         mixin currency-details(timing, minimum)
           .row
             .column.large-5.xlarge-4
