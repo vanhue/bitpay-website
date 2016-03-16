@@ -48,7 +48,7 @@ block information
   
   p When an invoice is presented in an iframe you have an option to receive invoice status updates in the parent window. This option is useful for updating the parent window presentation or redirecting the parent window to another URL after the invoice has been paid.
 
-  p When the invoice iframe receives a status update from the BitPay server the new status is posted from the invoice iframe to the parent window via the Window.postMessage method and passing #[code {status: string}] where #[code status] can be any of the #[a(href="/invoice-states") Invoice States] according to the descriptions provided.
+  p When the invoice iframe receives a status update from the BitPay server the new status is posted from the invoice iframe to the parent window via the Window.postMessage method and passing #[code {status: string}] where #[code status] can be any of the #[a(href="/docs/invoice-states") Invoice States] according to the descriptions provided.
 
   p Your implementation should take into consideration the browser support for this method. See #[a(href="http://caniuse.com/#feat=x-doc-messaging") CanIUse] for a list of browsers supporting #[code Window.postMessage].
   
