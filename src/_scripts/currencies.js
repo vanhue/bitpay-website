@@ -259,7 +259,7 @@
     },
     INR: {
       name: 'Indian Rupee',
-      symbol: '૱'
+      symbol: '₹'
     },
     IQD: {
       name: 'Iraqi Dinar',
