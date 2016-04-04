@@ -1,7 +1,7 @@
 extends _layouts/primary
 
 block title
-  title Payouts | BitPay
+  title Bitcoin Payouts | BitPay
 
   append vars
     -var bodyClass = 'white-header bg-blue-gradient';
@@ -17,8 +17,8 @@ block content
 
         .row.fade-in-up.delay-1
           .column.medium-8.medium-offset-2.text-center
-            a(href="mailto:info@bitpay.com").white.btn.btn-blue-solid.uppercase.bold.btn-margin.arrow Contact Us
-  include _includes/payouts-nav
+            a(href="mailto:sales@bitpay.com").white.btn.btn-blue-solid.uppercase.bold.btn-margin Contact Us
+  //- include _includes/payouts-nav
   .padding-vertical-less.bg-gray.border-bottom-gray
     .row.padding-less.text-center
       h5.uppercase.gray-dark Trusted By
@@ -134,17 +134,18 @@ block content
 
   .section.bg-lightblue-gradient.border-top-gray
     .row
-      .column.medium-8.medium-offset-2
-        h2.text-center.white Interested in learning how bitcoin payouts can work for your company? 
+      .column.medium-8.medium-offset-2.text-center
+        h3.white.margin-bottom-less Interested in learning how bitcoin payouts can work for your company?
+        a(href="mailto:sales@bitpay.com").white.btn.btn-blue-solid.uppercase.bold.btn-margin Contact Us
       
-    .row
-      .column.medium-7.small-centered.text-center
-        #mc_embed_signup
-          form#mc-embedded-subscribe-form.validate(action="//bitpay.us7.list-manage.com/subscribe/post?u=29605d300e62d91f5e2520c67&amp;id=d867b7b323" method="post"  name="mc-embedded-subscribe-form" target="_blank" novalidate)
-            #mc_embed_signup_scroll
-            .mc-field-group
-              br
-              input.required.email.mce-EMAIL(type="email" value="" name="EMAIL" style="width:70%; margin:0px; float:left; height:48px;text-indent: 23px; font-size: 1em;padding:10px 0; border-radius:50px 0px 0px 50px;")
-              input.button#mc-embedded-subscribe.white.btn.btn-blue-solid.uppercase.bold.arrow(type="submit" value="Get More Info" name="subscribe" style="width:30%; border-radius:0px 50px 50px 0px;")
+    //- .row
+    //-   .column.medium-7.small-centered.text-center
+        //- #mc_embed_signup
+        //-   form#mc-embedded-subscribe-form.validate(action="//bitpay.us7.list-manage.com/subscribe/post?u=29605d300e62d91f5e2520c67&amp;id=d867b7b323" method="post"  name="mc-embedded-subscribe-form" target="_blank" novalidate)
+        //-     #mc_embed_signup_scroll
+        //-     .mc-field-group
+        //-       br
+        //-       input.required.email.mce-EMAIL(type="email" value="" name="EMAIL" style="width:70%; margin:0px; float:left; height:48px;text-indent: 23px; font-size: 1em;padding:10px 0; border-radius:50px 0px 0px 50px;")
+        //-       input.button#mc-embedded-subscribe.white.btn.btn-blue-solid.uppercase.bold.arrow(type="submit" value="Get More Info" name="subscribe" style="width:30%; border-radius:0px 50px 50px 0px;")
         
           //a(href="mailto:sales@bitpay.com").white.btn.btn-blue-solid.uppercase.bold.btn-margin.arrow Contact Us
