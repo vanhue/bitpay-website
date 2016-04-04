@@ -1,0 +1,12 @@
+- var menu = { 'Mass Payouts': '/payouts#mass-payouts', 'Marketplace Payouts': '/payouts#marketplace', 'Payroll Payouts': '/payouts#payroll' };
+
+.border-bottom-gray(style="padding: 10px 0; background: rgba(255,255,255,0.1);")
+  .row
+    .column.medium-7.small-centered
+      ul.inline-list.subnav
+        each val, key in menu
+          li
+            if payoutSelected === key
+              a.white.uppercase.active(href=val title=key)= key
+            else
+              a.white.uppercase(href=val title=key)= key

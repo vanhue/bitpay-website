@@ -1,0 +1,150 @@
+extends _layouts/primary
+
+block title
+  title Payouts | BitPay
+
+  append vars
+    -var bodyClass = 'white-header bg-blue-gradient';
+    -var legalSelected = 'Mass Payouts'
+    
+block content
+
+  .section.background-cover
+    .row
+      .column.large-10.large-offset-1.text-center
+        h1.white.text-shadow.fade-in-up Your payouts strategy needs an upgrade.
+        h4.white.subheader.medium-8.medium-offset-2.text-shadow.fade-in-up.delay-1 Enable global bitcoin mass payouts, marketplace seller cashouts, and payroll payments using bitcoin.
+
+        .row.fade-in-up.delay-1
+          .column.medium-8.medium-offset-2.text-center
+            a(href="mailto:info@bitpay.com").white.btn.btn-blue-solid.uppercase.bold.btn-margin.arrow Contact Us
+  include _includes/payouts-nav
+  .padding-vertical-less.bg-gray.border-bottom-gray
+    .row.padding-less.text-center
+      h5.uppercase.gray-dark Trusted By
+      mixin logos(name, width, height)
+        .home-logo.h2.unselectable(style="background-image: url('/images/color_logos/#{name}.png'); width: #{width}em; height: #{height}em; margin-right: 1.5em")
+      +logos("zuman", 5, 2.5)
+      +logos("opskins", 5, 2.5)
+      +logos("pey", 4, 2)
+  
+
+  .section.border-bottom-gray.bg-white#mass-payouts(data-magellan-destination="mass-payouts")
+      .row
+        .column.large-12.margin-bottom-less
+          .column.large-4.margin-bottom-less
+            h3.header--bottom-border-left Make fast, efficient mass payouts with bitcoin.
+            
+          .column.large-8.margin-bottom-less
+            .column.large-6.margin-bottom-more
+              h5.bold Transfer Funds Quickly and Inexpensively
+              p Put an end to the hefty domestic and international transfer fees and wait times of traditional money transmission methods.
+            .column.large-6.margin-bottom-more
+              h5.bold Batch the Payouts, Eliminate the Paperwork
+              p Cut out inefficient one-by-one payments – BitPay issues the payouts for you. All you need to do is make one batch deposit.
+            .column.large-6
+              h5.bold Simplify Global Payments
+              p Geographic distance shouldn’t be an issue in a connected world. Pay anyone, anywhere with the world’s first borderless payment network.
+            .column.large-6
+              h5.bold Secure the Payout Process
+              p Don’t trust the sensitive financial information of your payees to middlemen. Bitcoin payments are designed with security and privacy in mind.
+  .section.border-bottom-gray.bg-white#marketplace(data-magellan-destination="marketplace")
+      .row
+        .column.large-12.margin-bottom-less
+          .column.large-4.margin-bottom-less
+            h3.header--bottom-border-left Pay your marketplace sellers using bitcoin
+            
+          .column.large-8.margin-bottom-less
+            .column.large-6
+              h5.bold Scale Quickly
+              p BitPay makes paying 1,000 sellers as simple as paying 10. Create a batch file at BitPay with all of your destination endpoints, and fund the whole batch with a single bank transfer.
+            .column.large-6
+              h5.bold Slash Payout Fees
+              p Eliminate the high fees of traditional payout methods. With BitPay, you pay a low, flat 1% fee on bitcoin payouts. That means more cash for you and your sellers.
+  
+  
+  .section.bg-white.border-bottom-gray.bg-gray-gradient
+      .row
+        .column.large-8.small-centered
+          .row
+            .column.medium-2
+              .quote-anim.medium-float-right.margin-bottom-less
+            .column.medium-10
+              p.lead.quote.fade-in-up.delay-1 Enabling bitcoin payments and cash outs was a natural match for our business. Since our users are trading virtual goods in an online global marketplace, transacting with digital currency is an obvious fit."
+              .row.fade-in-up.delay-2
+                .column.xlarge-7
+                  p.margin-bottom-none.bold John Brechisci, Jr.
+                  p.uppercase.small.margin-bottom-less CEO and Co-Founder
+                .column.xlarge-5
+                  .h2.background-contain.unselectable(style="background-image: url('/images/color_logos/opskins.png'); width: 6.5em; height: 1.5em;)")
+      
+  .section.border-bottom-gray.bg-white#payroll(data-magellan-destination="payroll")
+      .row
+        .column.large-12.margin-bottom-less
+          .column.large-4.margin-bottom-less
+            h3.header--bottom-border-left Enhance your payroll service. Integrate bitcoin.
+            p 51% responded "yes, absolutely" - pay me in bitcoin! - 
+              a(href="http://blogs.wsj.com/moneybeat/2014/01/27/pay-me-in-bitcoin-it-professionals-say/") The Wall Street Journal, 1/27/2014
+            
+          .column.large-8.margin-bottom-less
+            .column.large-6.margin-bottom-more
+              h5.bold Add Value to Your Clients
+              p Offer more choices in payroll with a bitcoin payout option that works alongside your current payout methods.
+            .column.large-6.margin-bottom-more
+              h5.bold Gain a Competitive Advantage
+              p Lead your industry and embrace the rising demand for alternative payment methods.
+            .column.large-6
+              h5.bold Deliver Payment in a Snap
+              p Don’t make your employees wait on checks or bank transfers to clear. Accelerate your payroll with bitcoin— the fastest settlement option on earth.
+            .column.large-6
+              h5.bold Secure the Payout Process
+              p Don’t trust the sensitive financial information of your payees to middlemen. Bitcoin payments are designed with security and privacy in mind.        
+
+      
+
+
+
+  .section.bg-gray-gradient
+      .row
+        .column.large-6
+          .row
+            .column.medium-2
+              .quote-anim.medium-float-right.margin-bottom-less
+            .column.medium-10
+              p.lead.quote.fade-in-up.delay-1 Bitcoin payroll offers businesses and employees a way to take advantage of bitcoin's advances as a payment method in daily life. We want to lower the barrier to getting and using bitcoin and solve the problem of costly international payments for employers."
+              .row.fade-in-up.delay-2
+                .column.xlarge-7
+                  p.margin-bottom-none.bold Ricardo Ferrer Rivero
+                  p.uppercase.small.margin-bottom-less Founder and managing director
+                .column.xlarge-5
+                  .h2.background-contain.unselectable(style="background-image: url('/images/color_logos/pey.png'); width: 6.5em; height: 1.5em;)")
+        .column.large-6
+          .row
+            .column.medium-2
+              .quote-anim.medium-float-right.margin-bottom-less
+            .column.medium-10
+              p.lead.quote.fade-in-up.delay-1 Through our partnership with BitPay, we will be able to better help companies that are moving beyond their startup phase attract and retain high value employees.
+              .row.fade-in-up.delay-2
+                .column.xlarge-7
+                  p.margin-bottom-none.bold Doug Devlin
+                  p.uppercase.small.margin-bottom-less co-founder, CEO
+                .column.xlarge-5
+                  .h2.background-contain.unselectable(style="background-image: url('/images/color_logos/zuman.png'); width: 4.5em; height: 1.5em;)")
+
+
+  .section.bg-lightblue-gradient.border-top-gray
+    .row
+      .column.medium-8.medium-offset-2
+        h2.text-center.white Interested in learning how bitcoin payouts can work for your company? 
+      
+    .row
+      .column.medium-7.small-centered.text-center
+        #mc_embed_signup
+          form#mc-embedded-subscribe-form.validate(action="//bitpay.us7.list-manage.com/subscribe/post?u=29605d300e62d91f5e2520c67&amp;id=d867b7b323" method="post"  name="mc-embedded-subscribe-form" target="_blank" novalidate)
+            #mc_embed_signup_scroll
+            .mc-field-group
+              br
+              input.required.email.mce-EMAIL(type="email" value="" name="EMAIL" style="width:70%; margin:0px; float:left; height:48px;text-indent: 23px; font-size: 1em;padding:10px 0; border-radius:50px 0px 0px 50px;")
+              input.button#mc-embedded-subscribe.white.btn.btn-blue-solid.uppercase.bold.arrow(type="submit" value="Get More Info" name="subscribe" style="width:30%; border-radius:0px 50px 50px 0px;")
+        
+          //a(href="mailto:sales@bitpay.com").white.btn.btn-blue-solid.uppercase.bold.btn-margin.arrow Contact Us
