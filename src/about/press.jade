@@ -2,26 +2,25 @@ extends ../_layouts/primary
 
 block title
   title Press | BitPay
-  
-<script type="application/ld+json">
-{
-  "@context" : "http://schema.org",
-  "@type" : "Organization",
-  "name" : "BitPay",
-  "url" : "https://bitpay.com/",
-  "logo" : "https://bitpay.com/images/bitpay-logo-primary.e8382bb8.png",
-  "sameAs" : [
-    "http://www.facebook.com/BitPayOfficial",
-    "http://www.twitter.com/BitPay",
-    "http://plus.google.com/b/103321420256995341273/+BitPay1/posts",
-    "http://www.linkedin.com/company/bitpay-inc-?",
-    "http://www.youtube.com/user/BitPayVideos",
-    "http://angel.co/bitpay"
-  ]
-}
-</script>
 
 block content
+  script(type="application/ld+json").
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Organization",
+      "name" : "BitPay",
+      "url" : "https://bitpay.com/",
+      "logo" : "https://bitpay.com/images/bitpay-logo-primary.e8382bb8.png",
+      "sameAs" : [
+        "http://www.facebook.com/BitPayOfficial",
+        "http://www.twitter.com/BitPay",
+        "http://plus.google.com/b/103321420256995341273/+BitPay1/posts",
+        "http://www.linkedin.com/company/bitpay-inc-?",
+        "http://www.youtube.com/user/BitPayVideos",
+        "http://angel.co/bitpay"
+      ]
+    }
+  </script>
   .row.margin-bottom-less
     .column.medium-3
       h1.small-only-text-center Press
