@@ -1,0 +1,15 @@
+{
+  "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "BitPay",
+  "url" : "https://bitpay.com/",
+  "logo" : "https://bitpay.com/images/bitpay-logo-inverse.png",
+  "sameAs" : [
+    "http://www.facebook.com/BitPayOfficial",
+    "http://www.twitter.com/BitPay",
+    "http://plus.google.com/b/103321420256995341273/+BitPay1/posts",
+    "http://www.linkedin.com/company/bitpay-inc-?",
+    "http://www.youtube.com/user/BitPayVideos",
+    "http://angel.co/bitpay"
+  ]
+}
